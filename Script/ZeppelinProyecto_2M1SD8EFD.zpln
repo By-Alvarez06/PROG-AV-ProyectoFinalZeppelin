@@ -1,0 +1,1980 @@
+﻿{
+  "paragraphs": [
+    {
+      "text": "%md\n# Proyecto Final Programacion Avanzada\n## Integrantes: Byron Alvarez, Erick Toledo, Fabian Cañar",
+      "user": "anonymous",
+      "dateUpdated": "2025-07-25T10:59:18-0500",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h1>Proyecto Final Programacion Avanzada</h1>\n<h2>Integrantes: Byron Alvarez, Erick Toledo, Fabian Cañar</h2>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1752716545926_1342093511",
+      "id": "paragraph_1752716545926_1342093511",
+      "dateCreated": "2025-07-16T20:42:25-0500",
+      "dateStarted": "2025-07-25T10:59:18-0500",
+      "dateFinished": "2025-07-25T10:59:18-0500",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:15272"
+    },
+    {
+      "text": "%md\n### Generamos el esquema a utilizar para la base de datos",
+      "user": "anonymous",
+      "dateUpdated": "2025-07-25T10:59:18-0500",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h3>Generamos el esquema a utilizar para la base de datos</h3>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1752716588232_543623012",
+      "id": "paragraph_1752716588232_543623012",
+      "dateCreated": "2025-07-16T20:43:08-0500",
+      "dateStarted": "2025-07-25T10:59:18-0500",
+      "dateFinished": "2025-07-25T10:59:18-0500",
+      "status": "FINISHED",
+      "$$hashKey": "object:15273"
+    },
+    {
+      "text": "import org.apache.spark.sql.types._\n\nval dataSchema = StructType(\n    Array(\n        StructField(\"id\",IntegerType,true),\n        StructField(\"fecha_notificacion\",DateType,true),\n        StructField(\"anio_notificacion\",IntegerType,true),\n        StructField(\"mes_notificacion\",IntegerType,true), \n        StructField(\"dia_notificacion\",IntegerType,true),\n        StructField(\"cod_provincia\",IntegerType,true), \n        StructField(\"provincia\",StringType,true),\n        StructField(\"cod_canton\",IntegerType,true), \n        StructField(\"canton\",StringType,true),\n        StructField(\"fecha_atencion\",DateType,true), \n        StructField(\"anio_atencion\",IntegerType,true), \n        StructField(\"mes_atencion\",IntegerType,true), \n        StructField(\"dia_atencion\",IntegerType,true),\n        StructField(\"cod_provincia_residencia\",IntegerType,true),\n        StructField(\"provincia_residencia\",StringType,true), \n        StructField(\"cod_canton_residencia\",IntegerType,true),\n        StructField(\"canton_residencia\",StringType,true),\n        StructField(\"edad_paciente\",IntegerType,true),\n        StructField(\"tipo_edad\",StringType,true),\n        StructField(\"sexo_paciente\",StringType,true), \n        StructField(\"condicion_final\",StringType,true), \n        StructField(\"fecha_defuncion\",DateType,true),\n        StructField(\"anio_defuncion\",IntegerType,true),\n        StructField(\"mes_defuncion\",IntegerType,true),\n        StructField(\"dia_defuncion\",IntegerType,true),\n        StructField(\"clasificacion_final\", StringType,true), \n        StructField(\"ae_se_notificacion\",StringType,true) \n        )\n    )",
+      "user": "anonymous",
+      "dateUpdated": "2025-07-25T10:59:18-0500",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "editorHide": false,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "import org.apache.spark.sql.types._\n\u001b[1m\u001b[34mdataSchema\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.types.StructType\u001b[0m = StructType(StructField(id,IntegerType,true), StructField(fecha_notificacion,DateType,true), StructField(anio_notificacion,IntegerType,true), StructField(mes_notificacion,IntegerType,true), StructField(dia_notificacion,IntegerType,true), StructField(cod_provincia,IntegerType,true), StructField(provincia,StringType,true), StructField(cod_canton,IntegerType,true), StructField(canton,StringType,true), StructField(fecha_atencion,DateType,true), StructField(anio_atencion,IntegerType,true), StructField(mes_atencion,IntegerType,true), StructField(dia_atencion,IntegerType,true), StructField(cod_provincia_residencia,IntegerType,true), StructField(provincia_residencia,StringType,true),...\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1752717318283_983247697",
+      "id": "paragraph_1752717318283_983247697",
+      "dateCreated": "2025-07-16T20:55:18-0500",
+      "dateStarted": "2025-07-25T10:59:18-0500",
+      "dateFinished": "2025-07-25T10:59:56-0500",
+      "status": "FINISHED",
+      "$$hashKey": "object:15274"
+    },
+    {
+      "text": "%md\n### Importamos los datos tomados de la base de datos mediante un CSV (Casos de COVID 19 en el Ecuador)",
+      "user": "anonymous",
+      "dateUpdated": "2025-07-25T10:59:56-0500",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h3>Importamos los datos tomados de la base de datos mediante un CSV (Casos de COVID 19 en el Ecuador)</h3>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1752717543624_1635538728",
+      "id": "paragraph_1752717543624_1635538728",
+      "dateCreated": "2025-07-16T20:59:03-0500",
+      "dateStarted": "2025-07-25T10:59:56-0500",
+      "dateFinished": "2025-07-25T10:59:56-0500",
+      "status": "FINISHED",
+      "$$hashKey": "object:15275"
+    },
+    {
+      "text": "val data = spark\n    .read\n    .schema(dataSchema)\n    .option(\"header\", \"true\")\n    .option(\"delimiter\", \";\")\n    .csv(\"/home/byron/Documentos/Tareas Programacion/Proyecto Final CSV/Covid19Export.csv\")",
+      "user": "anonymous",
+      "dateUpdated": "2025-07-25T10:59:56-0500",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mdata\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [id: int, fecha_notificacion: date ... 25 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1752717329318_991830298",
+      "id": "paragraph_1752717329318_991830298",
+      "dateCreated": "2025-07-16T20:55:29-0500",
+      "dateStarted": "2025-07-25T10:59:56-0500",
+      "dateFinished": "2025-07-25T11:00:00-0500",
+      "status": "FINISHED",
+      "$$hashKey": "object:15276"
+    },
+    {
+      "text": "z.show(data)",
+      "user": "anonymous",
+      "dateUpdated": "2025-07-25T11:00:00-0500",
+      "progress": 100,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "id": "string",
+                      "fecha_notificacion": "string",
+                      "anio_notificacion": "string",
+                      "mes_notificacion": "string",
+                      "dia_notificacion": "string",
+                      "cod_provincia": "string",
+                      "provincia": "string",
+                      "cod_canton": "string",
+                      "canton": "string",
+                      "fecha_atencion": "string",
+                      "anio_atencion": "string",
+                      "mes_atencion": "string",
+                      "dia_atencion": "string",
+                      "cod_provincia_residencia": "string",
+                      "provincia_residencia": "string",
+                      "cod_canton_residencia": "string",
+                      "canton_residencia": "string",
+                      "edad_paciente": "string",
+                      "tipo_edad": "string",
+                      "sexo_paciente": "string",
+                      "condicion_final": "string",
+                      "fecha_defuncion": "string",
+                      "anio_defuncion": "string",
+                      "mes_defuncion": "string",
+                      "dia_defuncion": "string",
+                      "clasificacion_final": "string",
+                      "ae_se_notificacion": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "id\tfecha_notificacion\tanio_notificacion\tmes_notificacion\tdia_notificacion\tcod_provincia\tprovincia\tcod_canton\tcanton\tfecha_atencion\tanio_atencion\tmes_atencion\tdia_atencion\tcod_provincia_residencia\tprovincia_residencia\tcod_canton_residencia\tcanton_residencia\tedad_paciente\ttipo_edad\tsexo_paciente\tcondicion_final\tfecha_defuncion\tanio_defuncion\tmes_defuncion\tdia_defuncion\tclasificacion_final\tae_se_notificacion\n1\t2020-09-18\t2020\t9\t18\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-08-25\t2020\t8\t25\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t24\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202038\n2\t2020-11-06\t2020\t11\t6\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-04-11\t2020\t4\t11\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t39\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202045\n3\t2020-09-11\t2020\t9\t11\t21\tSUCUMBIOS\t2101\tLAGO AGRIO\t2020-10-09\t2020\t10\t9\t21\tSUCUMBIOS\t2101\tLAGO AGRIO\t25\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202037\n4\t2020-06-30\t2020\t6\t30\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-06-29\t2020\t6\t29\t9\tGUAYAS\t901\tGUAYAQUIL\t26\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202027\n5\t2020-05-14\t2020\t5\t14\t9\tGUAYAS\t910\tMILAGRO\t2020-05-13\t2020\t5\t13\t9\tGUAYAS\t910\tMILAGRO\t52\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202020\n6\t2020-04-22\t2020\t4\t22\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-04-20\t2020\t4\t20\t9\tGUAYAS\t901\tGUAYAQUIL\t65\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202017\n7\t2020-05-28\t2020\t5\t28\t9\tGUAYAS\t921\tPLAYAS\t2020-05-27\t2020\t5\t27\t9\tGUAYAS\t901\tGUAYAQUIL\t57\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202022\n8\t2020-09-17\t2020\t9\t17\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-08-27\t2020\t8\t27\t10\tIMBABURA\t1004\tOTAVALO\t45\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202038\n9\t2020-07-16\t2020\t7\t16\t12\tLOS RIOS\t1209\tPALENQUE\t2020-07-16\t2020\t7\t16\t12\tLOS RIOS\t1209\tPALENQUE\t32\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202029\n10\t2020-04-25\t2020\t4\t25\t12\tLOS RIOS\t1207\tVENTANAS\t2020-04-24\t2020\t4\t24\t12\tLOS RIOS\t1207\tVENTANAS\t61\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202017\n11\t2020-05-16\t2020\t5\t16\t12\tLOS RIOS\t1207\tVENTANAS\t2020-05-15\t2020\t5\t15\t12\tLOS RIOS\t1207\tVENTANAS\t61\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202020\n12\t2020-11-11\t2020\t11\t11\t9\tGUAYAS\t911\tNARANJAL\t2020-11-11\t2020\t11\t11\t9\tGUAYAS\t911\tNARANJAL\t56\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202046\n13\t2020-10-14\t2020\t10\t14\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-12-10\t2020\t12\t10\t9\tGUAYAS\t901\tGUAYAQUIL\t56\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202042\n14\t2020-10-23\t2020\t10\t23\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-10-20\t2020\t10\t20\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t27\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202043\n15\t2020-09-24\t2020\t9\t24\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-09-23\t2020\t9\t23\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t38\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202039\n16\t2020-04-24\t2020\t4\t24\t24\tSANTA ELENA\t2401\tSANTA ELENA\t2020-04-23\t2020\t4\t23\t24\tSANTA ELENA\t2401\tSANTA ELENA\t52\tANIOS\tHOMBRE\tMUERTO\t2020-04-25\t2020\t4\t25\tCONFIRMADO\t202017\n17\t2020-11-16\t2020\t11\t16\t24\tSANTA ELENA\t2403\tSALINAS\t2020-12-11\t2020\t12\t11\t24\tSANTA ELENA\t2402\tLA LIBERTAD\t52\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202047\n18\t2020-06-04\t2020\t6\t4\t24\tSANTA ELENA\t2403\tSALINAS\t2020-04-06\t2020\t4\t6\t24\tSANTA ELENA\t2402\tLA LIBERTAD\t52\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202023\n19\t2020-06-16\t2020\t6\t16\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-03-24\t2020\t3\t24\t9\tGUAYAS\t901\tGUAYAQUIL\t51\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202025\n20\t2020-04-22\t2020\t4\t22\t24\tSANTA ELENA\t2401\tSANTA ELENA\t2020-04-14\t2020\t4\t14\t24\tSANTA ELENA\t2401\tSANTA ELENA\t74\tANIOS\tHOMBRE\tMUERTO\t2020-04-14\t2020\t4\t14\tCONFIRMADO\t202017\n21\t2020-10-15\t2020\t10\t15\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-08-17\t2020\t8\t17\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t28\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202042\n22\t2020-06-27\t2020\t6\t27\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-06-26\t2020\t6\t26\t9\tGUAYAS\t901\tGUAYAQUIL\t38\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202026\n23\t2020-08-26\t2020\t8\t26\t22\tORELLANA\t2203\tLA JOYA DE LOS SACHAS\t2020-08-24\t2020\t8\t24\t22\tORELLANA\t2203\tLA JOYA DE LOS SACHAS\t25\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202035\n24\t2020-04-16\t2020\t4\t16\t7\tEL ORO\t701\tMACHALA\t2020-04-15\t2020\t4\t15\t7\tEL ORO\t701\tMACHALA\t40\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202016\n25\t2020-10-20\t2020\t10\t20\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-12-06\t2020\t12\t6\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t38\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202043\n26\t2020-09-30\t2020\t9\t30\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-06-22\t2020\t6\t22\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t43\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202040\n27\t2020-06-08\t2020\t6\t8\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-07-06\t2020\t7\t6\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t27\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202024\n28\t2020-09-24\t2020\t9\t24\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-09-23\t2020\t9\t23\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t77\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202039\n29\t2020-08-18\t2020\t8\t18\t21\tSUCUMBIOS\t2103\tPUTUMAYO\t2020-08-16\t2020\t8\t16\t21\tSUCUMBIOS\t2103\tPUTUMAYO\t23\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202034\n30\t2020-09-15\t2020\t9\t15\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-07-30\t2020\t7\t30\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t30\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202038\n31\t2020-11-05\t2020\t11\t5\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-10-08\t2020\t10\t8\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t56\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202045\n32\t2020-09-04\t2020\t9\t4\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-08-25\t2020\t8\t25\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t36\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202036\n33\t2020-09-10\t2020\t9\t10\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-09-09\t2020\t9\t9\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t80\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202037\n34\t2020-10-08\t2020\t10\t8\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-07-30\t2020\t7\t30\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t17\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202041\n35\t2020-09-22\t2020\t9\t22\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-09-14\t2020\t9\t14\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t31\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202039\n36\t2020-08-31\t2020\t8\t31\t10\tIMBABURA\t1001\tIBARRA\t2020-08-28\t2020\t8\t28\t10\tIMBABURA\t1006\tSAN MIGUEL DE URCUQUI\t76\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202036\n37\t2020-10-16\t2020\t10\t16\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-07-16\t2020\t7\t16\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t51\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202042\n38\t2020-04-09\t2020\t4\t9\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-01-04\t2020\t1\t4\t9\tGUAYAS\t901\tGUAYAQUIL\t50\tANIOS\tHOMBRE\tMUERTO\t2020-04-05\t2020\t4\t5\tCONFIRMADO\t202015\n39\t2020-05-05\t2020\t5\t5\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-05-05\t2020\t5\t5\t9\tGUAYAS\t901\tGUAYAQUIL\t56\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202019\n40\t2020-08-14\t2020\t8\t14\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-08-13\t2020\t8\t13\t17\tPICHINCHA\t1705\tRUMI�AHUI\t54\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202033\n41\t2020-09-04\t2020\t9\t4\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-08-23\t2020\t8\t23\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t47\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202036\n42\t2020-09-29\t2020\t9\t29\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-08-14\t2020\t8\t14\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t70\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202040\n43\t2020-09-16\t2020\t9\t16\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-08-17\t2020\t8\t17\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t71\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202038\n44\t2020-09-01\t2020\t9\t1\t13\tMANABI\t1318\tOLMEDO\t2020-08-31\t2020\t8\t31\t13\tMANABI\t1318\tOLMEDO\t30\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202036\n45\t2020-07-28\t2020\t7\t28\t18\tTUNGURAHUA\t1801\tAMBATO\t2020-07-27\t2020\t7\t27\t18\tTUNGURAHUA\t1801\tAMBATO\t64\tANIOS\tHOMBRE\tMUERTO\t2020-07-28\t2020\t7\t28\tCONFIRMADO\t202031\n46\t2020-10-08\t2020\t10\t8\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-07-10\t2020\t7\t10\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t38\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202041\n47\t2020-08-13\t2020\t8\t13\t13\tMANABI\t1308\tMANTA\t2020-07-30\t2020\t7\t30\t13\tMANABI\t1308\tMANTA\t37\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202033\n48\t2020-07-15\t2020\t7\t15\t24\tSANTA ELENA\t2403\tSALINAS\t2020-09-07\t2020\t9\t7\t24\tSANTA ELENA\t2402\tLA LIBERTAD\t32\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202029\n49\t2020-07-28\t2020\t7\t28\t9\tGUAYAS\t925\tNOBOL\t2020-07-28\t2020\t7\t28\t9\tGUAYAS\t901\tGUAYAQUIL\t27\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202031\n50\t2020-10-01\t2020\t10\t1\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-08-09\t2020\t8\t9\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t24\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202040\n51\t2020-11-28\t2020\t11\t28\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-11-18\t2020\t11\t18\t9\tGUAYAS\t901\tGUAYAQUIL\t60\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202048\n52\t2020-04-04\t2020\t4\t4\t7\tEL ORO\t701\tMACHALA\t2020-03-04\t2020\t3\t4\t7\tEL ORO\t701\tMACHALA\t75\tANIOS\tHOMBRE\tMUERTO\t2020-04-03\t2020\t4\t3\tCONFIRMADO\t202014\n53\t2020-10-23\t2020\t10\t23\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-07-27\t2020\t7\t27\t6\tCHIMBORAZO\t601\tRIOBAMBA\t46\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202043\n54\t2020-10-29\t2020\t10\t29\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-12-08\t2020\t12\t8\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t42\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202044\n55\t2020-10-01\t2020\t10\t1\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-08-22\t2020\t8\t22\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t41\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202040\n56\t2020-07-08\t2020\t7\t8\t16\tPASTAZA\t1601\tPASTAZA\t2020-08-07\t2020\t8\t7\t16\tPASTAZA\t1601\tPASTAZA\t28\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202028\n57\t2020-10-20\t2020\t10\t20\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-10-14\t2020\t10\t14\t9\tGUAYAS\t901\tGUAYAQUIL\t26\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202043\n58\t2020-09-16\t2020\t9\t16\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-07-28\t2020\t7\t28\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t64\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202038\n59\t2020-09-30\t2020\t9\t30\t1\tAZUAY\t101\tCUENCA\t2020-09-16\t2020\t9\t16\t1\tAZUAY\t101\tCUENCA\t38\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202040\n60\t2020-11-05\t2020\t11\t5\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-04-11\t2020\t4\t11\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t21\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202045\n61\t2020-07-06\t2020\t7\t6\t9\tGUAYAS\t928\tISIDRO AYORA\t2020-06-07\t2020\t6\t7\t9\tGUAYAS\t928\tISIDRO AYORA\t69\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202028\n62\t2020-09-22\t2020\t9\t22\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-03-06\t2020\t3\t6\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t63\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202039\n63\t2020-09-09\t2020\t9\t9\t13\tMANABI\t1310\tPAJAN\t2020-09-09\t2020\t9\t9\t13\tMANABI\t1310\tPAJAN\t76\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202037\n64\t2020-09-16\t2020\t9\t16\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-05-08\t2020\t5\t8\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t71\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202038\n65\t2020-05-20\t2020\t5\t20\t9\tGUAYAS\t907\tDURAN\t2020-05-20\t2020\t5\t20\t9\tGUAYAS\t907\tDURAN\t32\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202021\n66\t2020-10-27\t2020\t10\t27\t6\tCHIMBORAZO\t601\tRIOBAMBA\t2020-10-24\t2020\t10\t24\t6\tCHIMBORAZO\t601\tRIOBAMBA\t63\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202044\n67\t2020-06-15\t2020\t6\t15\t15\tNAPO\t1501\tTENA\t2020-06-14\t2020\t6\t14\t15\tNAPO\t1501\tTENA\t32\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202025\n68\t2020-10-06\t2020\t10\t6\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-06-07\t2020\t6\t7\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t31\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202041\n69\t2020-09-03\t2020\t9\t3\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-08-31\t2020\t8\t31\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t27\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202036\n70\t2020-06-30\t2020\t6\t30\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-06-25\t2020\t6\t25\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t78\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202027\n71\t2020-09-23\t2020\t9\t23\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-06-30\t2020\t6\t30\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t42\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202039\n72\t2020-03-28\t2020\t3\t28\t24\tSANTA ELENA\t2401\tSANTA ELENA\t2020-03-28\t2020\t3\t28\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t38\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202013\n73\t2020-10-14\t2020\t10\t14\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-09-24\t2020\t9\t24\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t23\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202042\n74\t2020-09-04\t2020\t9\t4\t12\tLOS RIOS\t1206\tURDANETA\t2020-03-09\t2020\t3\t9\t12\tLOS RIOS\t1206\tURDANETA\t50\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202036\n75\t2020-08-29\t2020\t8\t29\t20\tGALAPAGOS\t2003\tSANTA CRUZ\t2020-08-28\t2020\t8\t28\t20\tGALAPAGOS\t2003\tSANTA CRUZ\t33\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202035\n76\t2020-08-29\t2020\t8\t29\t20\tGALAPAGOS\t2003\tSANTA CRUZ\t2020-08-21\t2020\t8\t21\t20\tGALAPAGOS\t2003\tSANTA CRUZ\t15\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202035\n77\t2020-10-24\t2020\t10\t24\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-12-06\t2020\t12\t6\t18\tTUNGURAHUA\t1801\tAMBATO\t34\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202043\n78\t2020-08-27\t2020\t8\t27\t20\tGALAPAGOS\t2003\tSANTA CRUZ\t2020-08-25\t2020\t8\t25\t20\tGALAPAGOS\t2003\tSANTA CRUZ\t26\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202035\n79\t2020-11-27\t2020\t11\t27\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-11-17\t2020\t11\t17\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t43\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202048\n80\t2020-07-16\t2020\t7\t16\t8\tESMERALDAS\t804\tQUININDE\t2020-07-17\t2020\t7\t17\t8\tESMERALDAS\t804\tQUININDE\t49\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202029\n81\t2020-08-20\t2020\t8\t20\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-07-23\t2020\t7\t23\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t49\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202034\n82\t2020-10-02\t2020\t10\t2\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-08-26\t2020\t8\t26\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t36\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202040\n83\t2020-10-17\t2020\t10\t17\t13\tMANABI\t1321\tJARAMIJO\t2020-09-06\t2020\t9\t6\t13\tMANABI\t1308\tMANTA\t57\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202042\n84\t2020-05-06\t2020\t5\t6\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t2020-06-05\t2020\t6\t5\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t42\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202019\n85\t2020-07-29\t2020\t7\t29\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-07-26\t2020\t7\t26\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t65\tANIOS\tHOMBRE\tMUERTO\t2020-08-10\t2020\t8\t10\tDESCARTADO\t202031\n86\t2020-06-12\t2020\t6\t12\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t2020-11-06\t2020\t11\t6\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t57\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202024\n87\t2020-06-25\t2020\t6\t25\t18\tTUNGURAHUA\t1802\tBA�OS DE AGUA SANTA\t2020-06-17\t2020\t6\t17\t18\tTUNGURAHUA\t1802\tBA�OS DE AGUA SANTA\t49\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202026\n88\t2020-10-22\t2020\t10\t22\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-05-27\t2020\t5\t27\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t51\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202043\n89\t2020-10-21\t2020\t10\t21\t10\tIMBABURA\t1001\tIBARRA\t2020-08-09\t2020\t8\t9\t10\tIMBABURA\t1006\tSAN MIGUEL DE URCUQUI\t84\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202043\n90\t2020-10-13\t2020\t10\t13\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-12-10\t2020\t12\t10\t17\tPICHINCHA\t1705\tRUMI�AHUI\t35\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202042\n91\t2020-11-23\t2020\t11\t23\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-11-19\t2020\t11\t19\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t47\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202048\n92\t2020-05-29\t2020\t5\t29\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-05-28\t2020\t5\t28\t9\tGUAYAS\t901\tGUAYAQUIL\t43\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202022\n93\t2020-08-21\t2020\t8\t21\t11\tLOJA\t1110\tPUYANGO\t2020-08-20\t2020\t8\t20\t11\tLOJA\t1114\tPINDAL\t75\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202034\n94\t2020-04-29\t2020\t4\t29\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-04-29\t2020\t4\t29\t9\tGUAYAS\t916\tSAMBORONDON\t46\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202018\n95\t2020-10-31\t2020\t10\t31\t5\tCOTOPAXI\t501\tLATACUNGA\t2020-10-30\t2020\t10\t30\t5\tCOTOPAXI\t501\tLATACUNGA\t87\tANIOS\tHOMBRE\tMUERTO\t2020-11-01\t2020\t11\t1\tPROBABLE\t202044\n96\t2020-06-02\t2020\t6\t2\t7\tEL ORO\t702\tARENILLAS\t2020-05-29\t2020\t5\t29\t7\tEL ORO\t702\tARENILLAS\t59\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202023\n97\t2020-09-03\t2020\t9\t3\t5\tCOTOPAXI\t501\tLATACUNGA\t2020-08-14\t2020\t8\t14\t5\tCOTOPAXI\t501\tLATACUNGA\t76\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202036\n98\t2020-10-11\t2020\t10\t11\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-02-08\t2020\t2\t8\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t71\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202042\n99\t2020-07-20\t2020\t7\t20\t13\tMANABI\t1301\tPORTOVIEJO\t2020-07-20\t2020\t7\t20\t13\tMANABI\t1301\tPORTOVIEJO\t36\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202030\n100\t2020-04-11\t2020\t4\t11\t1\tAZUAY\t101\tCUENCA\t2020-08-04\t2020\t8\t4\t1\tAZUAY\t105\tPAUTE\t51\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202015\n101\t2020-05-18\t2020\t5\t18\t13\tMANABI\t1301\tPORTOVIEJO\t2020-05-13\t2020\t5\t13\t13\tMANABI\t1301\tPORTOVIEJO\t58\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202021\n102\t2020-05-15\t2020\t5\t15\t13\tMANABI\t1306\tJIPIJAPA\t2020-05-15\t2020\t5\t15\t13\tMANABI\t1309\tMONTECRISTI\t41\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202020\n103\t2020-09-23\t2020\t9\t23\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-09-22\t2020\t9\t22\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t30\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202039\n104\t2020-05-21\t2020\t5\t21\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-05-21\t2020\t5\t21\t9\tGUAYAS\t901\tGUAYAQUIL\t35\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202021\n105\t2020-06-08\t2020\t6\t8\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-05-06\t2020\t5\t6\t9\tGUAYAS\t901\tGUAYAQUIL\t41\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202024\n106\t2020-06-01\t2020\t6\t1\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-01-06\t2020\t1\t6\t9\tGUAYAS\t901\tGUAYAQUIL\t40\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202023\n107\t2020-04-30\t2020\t4\t30\t13\tMANABI\t1309\tMONTECRISTI\t2020-04-30\t2020\t4\t30\t13\tMANABI\t1309\tMONTECRISTI\t44\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202018\n108\t2020-03-22\t2020\t3\t22\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-03-21\t2020\t3\t21\t9\tGUAYAS\t901\tGUAYAQUIL\t30\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202013\n109\t2020-06-11\t2020\t6\t11\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-10-06\t2020\t10\t6\t9\tGUAYAS\t901\tGUAYAQUIL\t51\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202024\n110\t2020-11-30\t2020\t11\t30\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-11-30\t2020\t11\t30\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t59\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202049\n111\t2020-10-16\t2020\t10\t16\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-10-15\t2020\t10\t15\t9\tGUAYAS\t901\tGUAYAQUIL\t70\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202042\n112\t2020-11-03\t2020\t11\t3\t1\tAZUAY\t101\tCUENCA\t2020-02-11\t2020\t2\t11\t1\tAZUAY\t101\tCUENCA\t20\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202045\n113\t2020-05-20\t2020\t5\t20\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-05-20\t2020\t5\t20\t9\tGUAYAS\t901\tGUAYAQUIL\t62\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202021\n114\t2020-09-29\t2020\t9\t29\t18\tTUNGURAHUA\t1801\tAMBATO\t2020-09-23\t2020\t9\t23\t18\tTUNGURAHUA\t1801\tAMBATO\t43\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202040\n115\t2020-10-12\t2020\t10\t12\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-08-19\t2020\t8\t19\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t53\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202042\n116\t2020-09-24\t2020\t9\t24\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-09-23\t2020\t9\t23\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t50\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202039\n117\t2020-05-25\t2020\t5\t25\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-05-25\t2020\t5\t25\t9\tGUAYAS\t901\tGUAYAQUIL\t48\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202022\n118\t2020-08-29\t2020\t8\t29\t24\tSANTA ELENA\t2401\tSANTA ELENA\t2020-01-08\t2020\t1\t8\t18\tTUNGURAHUA\t1802\tBA�OS DE AGUA SANTA\t50\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202035\n119\t2020-07-22\t2020\t7\t22\t12\tLOS RIOS\t1201\tBABAHOYO\t2020-07-20\t2020\t7\t20\t9\tGUAYAS\t910\tMILAGRO\t59\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202030\n120\t2020-10-07\t2020\t10\t7\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-09-24\t2020\t9\t24\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t30\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202041\n121\t2020-04-16\t2020\t4\t16\t9\tGUAYAS\t911\tNARANJAL\t2020-04-16\t2020\t4\t16\t9\tGUAYAS\t903\tBALAO\t57\tANIOS\tHOMBRE\tMUERTO\t2020-04-19\t2020\t4\t19\tCONFIRMADO\t202016\n122\t2020-09-17\t2020\t9\t17\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-05-15\t2020\t5\t15\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t4\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202038\n123\t2020-08-24\t2020\t8\t24\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-08-23\t2020\t8\t23\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t16\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202035\n124\t2020-08-11\t2020\t8\t11\t2\tBOLIVAR\t207\tLAS NAVES\t2020-11-08\t2020\t11\t8\t2\tBOLIVAR\t207\tLAS NAVES\t39\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202033\n125\t2020-10-14\t2020\t10\t14\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-07-29\t2020\t7\t29\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t72\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202042\n126\t2020-10-20\t2020\t10\t20\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-03-07\t2020\t3\t7\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t33\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202043\n127\t2020-08-17\t2020\t8\t17\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-10-08\t2020\t10\t8\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t41\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202034\n128\t2020-10-16\t2020\t10\t16\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-08-07\t2020\t8\t7\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t29\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202042\n129\t2020-07-14\t2020\t7\t14\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-07-14\t2020\t7\t14\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t30\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202029\n130\t2020-06-28\t2020\t6\t28\t19\tZAMORA CHINCHIPE\t1901\tZAMORA\t2020-06-28\t2020\t6\t28\t19\tZAMORA CHINCHIPE\t1901\tZAMORA\t50\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202027\n131\t2020-08-28\t2020\t8\t28\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-08-28\t2020\t8\t28\t9\tGUAYAS\t901\tGUAYAQUIL\t28\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202035\n132\t2020-05-20\t2020\t5\t20\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-03-16\t2020\t3\t16\t9\tGUAYAS\t901\tGUAYAQUIL\t27\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202021\n133\t2020-08-28\t2020\t8\t28\t24\tSANTA ELENA\t2401\tSANTA ELENA\t2020-07-27\t2020\t7\t27\t24\tSANTA ELENA\t2401\tSANTA ELENA\t57\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202035\n134\t2020-06-04\t2020\t6\t4\t18\tTUNGURAHUA\t1801\tAMBATO\t2020-05-27\t2020\t5\t27\t18\tTUNGURAHUA\t1801\tAMBATO\t41\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202023\n135\t2020-04-29\t2020\t4\t29\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-04-29\t2020\t4\t29\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t46\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202018\n136\t2020-09-18\t2020\t9\t18\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-04-08\t2020\t4\t8\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t27\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202038\n137\t2020-05-27\t2020\t5\t27\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-05-21\t2020\t5\t21\t9\tGUAYAS\t901\tGUAYAQUIL\t32\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202022\n138\t2020-11-25\t2020\t11\t25\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-11-23\t2020\t11\t23\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t33\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202048\n139\t2020-09-01\t2020\t9\t1\t7\tEL ORO\t713\tZARUMA\t2020-08-28\t2020\t8\t28\t7\tEL ORO\t713\tZARUMA\t37\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202036\n140\t2020-04-14\t2020\t4\t14\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-04-14\t2020\t4\t14\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t51\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202016\n141\t2020-09-22\t2020\t9\t22\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-09-22\t2020\t9\t22\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t34\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202039\n142\t2020-08-21\t2020\t8\t21\t12\tLOS RIOS\t1205\tQUEVEDO\t2020-08-19\t2020\t8\t19\t12\tLOS RIOS\t1205\tQUEVEDO\t30\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202034\n143\t2020-07-29\t2020\t7\t29\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-07-16\t2020\t7\t16\t9\tGUAYAS\t910\tMILAGRO\t28\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202031\n144\t2020-06-15\t2020\t6\t15\t7\tEL ORO\t712\tSANTA ROSA\t2020-06-15\t2020\t6\t15\t7\tEL ORO\t712\tSANTA ROSA\t19\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202025\n145\t2020-09-14\t2020\t9\t14\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-07-09\t2020\t7\t9\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t62\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202038\n146\t2020-06-08\t2020\t6\t8\t16\tPASTAZA\t1601\tPASTAZA\t2020-04-06\t2020\t4\t6\t16\tPASTAZA\t1601\tPASTAZA\t51\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202024\n147\t2020-09-18\t2020\t9\t18\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-09-16\t2020\t9\t16\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t31\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202038\n148\t2020-10-18\t2020\t10\t18\t1\tAZUAY\t101\tCUENCA\t2020-10-18\t2020\t10\t18\t1\tAZUAY\t103\tGUALACEO\t61\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202043\n149\t2020-10-06\t2020\t10\t6\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-06-10\t2020\t6\t10\t9\tGUAYAS\t901\tGUAYAQUIL\t54\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202041\n150\t2020-06-08\t2020\t6\t8\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-04-06\t2020\t4\t6\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t55\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202024\n151\t2020-10-15\t2020\t10\t15\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t2020-05-29\t2020\t5\t29\t12\tLOS RIOS\t1210\tBUENA FE\t34\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202042\n152\t2020-08-27\t2020\t8\t27\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-03-08\t2020\t3\t8\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t35\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202035\n153\t2020-09-30\t2020\t9\t30\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-04-09\t2020\t4\t9\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t59\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202040\n154\t2020-04-09\t2020\t4\t9\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-03-26\t2020\t3\t26\t9\tGUAYAS\t901\tGUAYAQUIL\t35\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202015\n155\t2020-08-21\t2020\t8\t21\t13\tMANABI\t1302\tBOLIVAR\t2020-08-20\t2020\t8\t20\t13\tMANABI\t1302\tBOLIVAR\t54\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202034\n156\t2020-08-22\t2020\t8\t22\t13\tMANABI\t1302\tBOLIVAR\t2020-08-20\t2020\t8\t20\t13\tMANABI\t1302\tBOLIVAR\t24\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202034\n157\t2020-10-07\t2020\t10\t7\t13\tMANABI\t1312\tROCAFUERTE\t2020-06-10\t2020\t6\t10\t13\tMANABI\t1312\tROCAFUERTE\t38\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202041\n158\t2020-05-09\t2020\t5\t9\t13\tMANABI\t1301\tPORTOVIEJO\t2020-08-05\t2020\t8\t5\t13\tMANABI\t1301\tPORTOVIEJO\t52\tANIOS\tHOMBRE\tMUERTO\t2020-05-20\t2020\t5\t20\tCONFIRMADO\t202019\n159\t2020-10-19\t2020\t10\t19\t13\tMANABI\t1312\tROCAFUERTE\t2020-10-19\t2020\t10\t19\t13\tMANABI\t1312\tROCAFUERTE\t11\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202043\n160\t2020-06-17\t2020\t6\t17\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-01-04\t2020\t1\t4\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t50\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202025\n161\t2020-09-29\t2020\t9\t29\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-04-09\t2020\t4\t9\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t28\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202040\n162\t2020-04-28\t2020\t4\t28\t13\tMANABI\t1301\tPORTOVIEJO\t2020-04-28\t2020\t4\t28\t13\tMANABI\t1301\tPORTOVIEJO\t31\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202018\n163\t2020-07-14\t2020\t7\t14\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-02-07\t2020\t2\t7\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t27\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202029\n164\t2020-05-04\t2020\t5\t4\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-04-05\t2020\t4\t5\t9\tGUAYAS\t901\tGUAYAQUIL\t73\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202019\n165\t2020-04-09\t2020\t4\t9\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-07-04\t2020\t7\t4\t9\tGUAYAS\t901\tGUAYAQUIL\t71\tANIOS\tHOMBRE\tMUERTO\t2020-04-09\t2020\t4\t9\tCONFIRMADO\t202015\n166\t2020-10-23\t2020\t10\t23\t13\tMANABI\t1312\tROCAFUERTE\t2020-10-23\t2020\t10\t23\t13\tMANABI\t1312\tROCAFUERTE\t36\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202043\n167\t2020-07-30\t2020\t7\t30\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-07-24\t2020\t7\t24\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t47\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202031\n168\t2020-07-19\t2020\t7\t19\t1\tAZUAY\t101\tCUENCA\t2020-07-18\t2020\t7\t18\t1\tAZUAY\t101\tCUENCA\t34\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202030\n169\t2020-06-01\t2020\t6\t1\t13\tMANABI\t1301\tPORTOVIEJO\t2020-05-28\t2020\t5\t28\t13\tMANABI\t1301\tPORTOVIEJO\t26\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202023\n170\t2020-06-08\t2020\t6\t8\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-02-06\t2020\t2\t6\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t59\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202024\n171\t2020-08-20\t2020\t8\t20\t13\tMANABI\t1301\tPORTOVIEJO\t2020-07-22\t2020\t7\t22\t13\tMANABI\t1301\tPORTOVIEJO\t48\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202034\n172\t2020-06-09\t2020\t6\t9\t17\tPICHINCHA\t1709\tPUERTO QUITO\t2020-03-06\t2020\t3\t6\t17\tPICHINCHA\t1709\tPUERTO QUITO\t27\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202024\n173\t2020-09-05\t2020\t9\t5\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2302\tLA CONCORDIA\t2020-04-09\t2020\t4\t9\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2302\tLA CONCORDIA\t35\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202036\n174\t2020-06-24\t2020\t6\t24\t11\tLOJA\t1101\tLOJA\t2020-06-22\t2020\t6\t22\t11\tLOJA\t1101\tLOJA\t32\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202026\n175\t2020-10-19\t2020\t10\t19\t13\tMANABI\t1312\tROCAFUERTE\t2020-10-19\t2020\t10\t19\t13\tMANABI\t1312\tROCAFUERTE\t7\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202043\n176\t2020-10-19\t2020\t10\t19\t13\tMANABI\t1312\tROCAFUERTE\t2020-10-19\t2020\t10\t19\t13\tMANABI\t1312\tROCAFUERTE\t13\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202043\n177\t2020-10-29\t2020\t10\t29\t13\tMANABI\t1312\tROCAFUERTE\t2020-10-29\t2020\t10\t29\t13\tMANABI\t1312\tROCAFUERTE\t23\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202044\n178\t2020-11-09\t2020\t11\t9\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-07-16\t2020\t7\t16\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t39\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202046\n179\t2020-05-20\t2020\t5\t20\t13\tMANABI\t1314\tSUCRE\t2020-05-18\t2020\t5\t18\t13\tMANABI\t1314\tSUCRE\t66\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202021\n180\t2020-04-16\t2020\t4\t16\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-11-04\t2020\t11\t4\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t35\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202016\n181\t2020-09-18\t2020\t9\t18\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-07-18\t2020\t7\t18\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t23\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202038\n182\t2020-10-12\t2020\t10\t12\t13\tMANABI\t1312\tROCAFUERTE\t2020-12-10\t2020\t12\t10\t13\tMANABI\t1312\tROCAFUERTE\t37\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202042\n183\t2020-04-13\t2020\t4\t13\t12\tLOS RIOS\t1201\tBABAHOYO\t2020-11-04\t2020\t11\t4\t12\tLOS RIOS\t1201\tBABAHOYO\t24\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202016\n184\t2020-06-11\t2020\t6\t11\t9\tGUAYAS\t916\tSAMBORONDON\t2020-09-06\t2020\t9\t6\t9\tGUAYAS\t916\tSAMBORONDON\t26\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202024\n185\t2020-08-25\t2020\t8\t25\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-03-07\t2020\t3\t7\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t34\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202035\n186\t2020-09-22\t2020\t9\t22\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-09-22\t2020\t9\t22\t9\tGUAYAS\t901\tGUAYAQUIL\t23\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202039\n187\t2020-09-18\t2020\t9\t18\t13\tMANABI\t1320\tJAMA\t2020-09-14\t2020\t9\t14\t13\tMANABI\t1320\tJAMA\t69\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202038\n188\t2020-08-26\t2020\t8\t26\t10\tIMBABURA\t1001\tIBARRA\t2020-08-26\t2020\t8\t26\t10\tIMBABURA\t1005\tPIMAMPIRO\t36\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202035\n189\t2020-11-18\t2020\t11\t18\t12\tLOS RIOS\t1202\tBABA\t2020-04-08\t2020\t4\t8\t9\tGUAYAS\t901\tGUAYAQUIL\t20\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202047\n190\t2020-04-09\t2020\t4\t9\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-03-27\t2020\t3\t27\t9\tGUAYAS\t901\tGUAYAQUIL\t41\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202015\n191\t2020-06-13\t2020\t6\t13\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-11-06\t2020\t11\t6\t9\tGUAYAS\t901\tGUAYAQUIL\t25\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202024\n192\t2020-08-06\t2020\t8\t6\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-03-08\t2020\t3\t8\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t46\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202032\n193\t2020-04-29\t2020\t4\t29\t8\tESMERALDAS\t801\tESMERALDAS\t2020-04-29\t2020\t4\t29\t8\tESMERALDAS\t801\tESMERALDAS\t74\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202018\n194\t2020-09-21\t2020\t9\t21\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-09-18\t2020\t9\t18\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t63\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202039\n195\t2020-10-31\t2020\t10\t31\t13\tMANABI\t1321\tJARAMIJO\t2020-10-26\t2020\t10\t26\t13\tMANABI\t1308\tMANTA\t41\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202044\n196\t2020-11-18\t2020\t11\t18\t13\tMANABI\t1308\tMANTA\t2020-11-18\t2020\t11\t18\t13\tMANABI\t1308\tMANTA\t76\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202047\n197\t2020-08-27\t2020\t8\t27\t13\tMANABI\t1322\tSAN VICENTE\t2020-08-24\t2020\t8\t24\t13\tMANABI\t1322\tSAN VICENTE\t40\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202035\n198\t2020-09-21\t2020\t9\t21\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-09-18\t2020\t9\t18\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t38\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202039\n199\t2020-06-02\t2020\t6\t2\t8\tESMERALDAS\t801\tESMERALDAS\t2020-01-06\t2020\t1\t6\t8\tESMERALDAS\t801\tESMERALDAS\t35\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202023\n200\t2020-09-21\t2020\t9\t21\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-09-18\t2020\t9\t18\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t36\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202039\n201\t2020-11-05\t2020\t11\t5\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-08-20\t2020\t8\t20\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t28\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202045\n202\t2020-09-11\t2020\t9\t11\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-11-09\t2020\t11\t9\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t69\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202037\n203\t2020-09-16\t2020\t9\t16\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-09-09\t2020\t9\t9\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t41\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202038\n204\t2020-08-26\t2020\t8\t26\t4\tCARCHI\t401\tTULCAN\t2020-08-26\t2020\t8\t26\t4\tCARCHI\t401\tTULCAN\t34\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202035\n205\t2020-04-13\t2020\t4\t13\t9\tGUAYAS\t908\tEMPALME\t2020-10-04\t2020\t10\t4\t9\tGUAYAS\t908\tEMPALME\t47\tANIOS\tHOMBRE\tMUERTO\t2020-04-16\t2020\t4\t16\tCONFIRMADO\t202016\n206\t2020-09-21\t2020\t9\t21\t4\tCARCHI\t401\tTULCAN\t2020-09-21\t2020\t9\t21\t4\tCARCHI\t401\tTULCAN\t21\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202039\n207\t2020-06-16\t2020\t6\t16\t13\tMANABI\t1308\tMANTA\t2020-10-06\t2020\t10\t6\t13\tMANABI\t1308\tMANTA\t72\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202025\n208\t2020-05-27\t2020\t5\t27\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-05-26\t2020\t5\t26\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t56\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202022\n209\t2020-05-23\t2020\t5\t23\t13\tMANABI\t1301\tPORTOVIEJO\t2020-05-18\t2020\t5\t18\t13\tMANABI\t1301\tPORTOVIEJO\t31\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202021\n210\t2020-08-03\t2020\t8\t3\t4\tCARCHI\t404\tMIRA\t2020-07-29\t2020\t7\t29\t4\tCARCHI\t404\tMIRA\t7\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202032\n211\t2020-05-28\t2020\t5\t28\t13\tMANABI\t1301\tPORTOVIEJO\t2020-05-22\t2020\t5\t22\t13\tMANABI\t1301\tPORTOVIEJO\t27\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202022\n212\t2020-04-18\t2020\t4\t18\t9\tGUAYAS\t916\tSAMBORONDON\t2020-04-16\t2020\t4\t16\t9\tGUAYAS\t916\tSAMBORONDON\t29\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202016\n213\t2020-04-25\t2020\t4\t25\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-04-25\t2020\t4\t25\t9\tGUAYAS\t907\tDURAN\t27\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202017\n214\t2020-10-23\t2020\t10\t23\t13\tMANABI\t1321\tJARAMIJO\t2020-07-16\t2020\t7\t16\t13\tMANABI\t1308\tMANTA\t77\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202043\n215\t2020-10-19\t2020\t10\t19\t7\tEL ORO\t701\tMACHALA\t2020-10-16\t2020\t10\t16\t7\tEL ORO\t701\tMACHALA\t33\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202043\n216\t2020-08-06\t2020\t8\t6\t13\tMANABI\t1301\tPORTOVIEJO\t2020-05-08\t2020\t5\t8\t13\tMANABI\t1301\tPORTOVIEJO\t27\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202032\n217\t2020-10-12\t2020\t10\t12\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-04-29\t2020\t4\t29\t9\tGUAYAS\t901\tGUAYAQUIL\t49\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202042\n218\t2020-11-21\t2020\t11\t21\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-11-19\t2020\t11\t19\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t25\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202047\n219\t2020-10-08\t2020\t10\t8\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-09-09\t2020\t9\t9\t9\tGUAYAS\t901\tGUAYAQUIL\t75\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202041\n220\t2020-10-27\t2020\t10\t27\t7\tEL ORO\t701\tMACHALA\t2020-10-27\t2020\t10\t27\t7\tEL ORO\t701\tMACHALA\t58\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202044\n221\t2020-10-14\t2020\t10\t14\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-07-10\t2020\t7\t10\t9\tGUAYAS\t901\tGUAYAQUIL\t31\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202042\n222\t2020-10-05\t2020\t10\t5\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-05-26\t2020\t5\t26\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t41\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202041\n223\t2020-08-14\t2020\t8\t14\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-06-30\t2020\t6\t30\t5\tCOTOPAXI\t505\tSALCEDO\t62\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202033\n224\t2020-09-17\t2020\t9\t17\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-09-16\t2020\t9\t16\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t38\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202038\n225\t2020-11-28\t2020\t11\t28\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-10-26\t2020\t10\t26\t21\tSUCUMBIOS\t2105\tSUCUMBIOS\t56\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202048\n226\t2020-08-03\t2020\t8\t3\t13\tMANABI\t1317\tPEDERNALES\t2020-07-29\t2020\t7\t29\t13\tMANABI\t1317\tPEDERNALES\t73\tANIOS\tHOMBRE\tMUERTO\t2020-07-31\t2020\t7\t31\tPROBABLE\t202032\n227\t2020-04-28\t2020\t4\t28\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-04-28\t2020\t4\t28\t9\tGUAYAS\t901\tGUAYAQUIL\t18\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202018\n228\t2020-05-08\t2020\t5\t8\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t2020-08-05\t2020\t8\t5\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t37\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202019\n229\t2020-09-09\t2020\t9\t9\t13\tMANABI\t1312\tROCAFUERTE\t2020-09-09\t2020\t9\t9\t13\tMANABI\t1312\tROCAFUERTE\t57\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202037\n230\t2020-11-13\t2020\t11\t13\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-08-09\t2020\t8\t9\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t46\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202046\n231\t2020-08-12\t2020\t8\t12\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t2020-11-08\t2020\t11\t8\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t56\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202033\n232\t2020-11-24\t2020\t11\t24\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-11-22\t2020\t11\t22\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t27\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202048\n233\t2020-11-18\t2020\t11\t18\t12\tLOS RIOS\t1207\tVENTANAS\t2020-04-23\t2020\t4\t23\t9\tGUAYAS\t901\tGUAYAQUIL\t26\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202047\n234\t2020-07-02\t2020\t7\t2\t18\tTUNGURAHUA\t1807\tSAN PEDRO DE PELILEO\t2020-06-30\t2020\t6\t30\t18\tTUNGURAHUA\t1807\tSAN PEDRO DE PELILEO\t45\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202027\n235\t2020-11-26\t2020\t11\t26\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-11-16\t2020\t11\t16\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t46\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202048\n236\t2020-06-05\t2020\t6\t5\t6\tCHIMBORAZO\t601\tRIOBAMBA\t2020-04-06\t2020\t4\t6\t6\tCHIMBORAZO\t601\tRIOBAMBA\t54\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202023\n237\t2020-07-22\t2020\t7\t22\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-07-21\t2020\t7\t21\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t46\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202030\n238\t2020-09-17\t2020\t9\t17\t6\tCHIMBORAZO\t601\tRIOBAMBA\t2020-09-17\t2020\t9\t17\t6\tCHIMBORAZO\t601\tRIOBAMBA\t59\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202038\n239\t2020-11-24\t2020\t11\t24\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-09-22\t2020\t9\t22\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t34\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202048\n240\t2020-10-31\t2020\t10\t31\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-03-07\t2020\t3\t7\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t21\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202044\n241\t2020-03-24\t2020\t3\t24\t1\tAZUAY\t101\tCUENCA\t2020-03-24\t2020\t3\t24\t1\tAZUAY\t101\tCUENCA\t39\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202013\n242\t2020-06-16\t2020\t6\t16\t24\tSANTA ELENA\t2401\tSANTA ELENA\t2020-06-15\t2020\t6\t15\t24\tSANTA ELENA\t2401\tSANTA ELENA\t89\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202025\n243\t2020-06-19\t2020\t6\t19\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t2020-06-18\t2020\t6\t18\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t63\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202025\n244\t2020-10-02\t2020\t10\t2\t9\tGUAYAS\t927\tGNRAL. ANTONIO ELIZALDE\t2020-01-10\t2020\t1\t10\t6\tCHIMBORAZO\t610\tCUMANDA\t58\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202040\n245\t2020-08-18\t2020\t8\t18\t1\tAZUAY\t101\tCUENCA\t2020-08-17\t2020\t8\t17\t1\tAZUAY\t101\tCUENCA\t21\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202034\n246\t2020-08-03\t2020\t8\t3\t13\tMANABI\t1301\tPORTOVIEJO\t2020-07-27\t2020\t7\t27\t13\tMANABI\t1314\tSUCRE\t46\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202032\n247\t2020-04-09\t2020\t4\t9\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-09-04\t2020\t9\t4\t9\tGUAYAS\t901\tGUAYAQUIL\t43\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202015\n248\t2020-09-20\t2020\t9\t20\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-08-18\t2020\t8\t18\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t11\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202039\n249\t2020-07-07\t2020\t7\t7\t11\tLOJA\t1101\tLOJA\t2020-07-07\t2020\t7\t7\t11\tLOJA\t1101\tLOJA\t26\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202028\n250\t2020-11-17\t2020\t11\t17\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-09-21\t2020\t9\t21\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t24\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202047\n251\t2020-10-22\t2020\t10\t22\t12\tLOS RIOS\t1206\tURDANETA\t2020-10-22\t2020\t10\t22\t12\tLOS RIOS\t1206\tURDANETA\t38\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202043\n252\t2020-10-29\t2020\t10\t29\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-10-10\t2020\t10\t10\t9\tGUAYAS\t907\tDURAN\t86\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202044\n253\t2020-06-16\t2020\t6\t16\t13\tMANABI\t1308\tMANTA\t2020-10-06\t2020\t10\t6\t13\tMANABI\t1308\tMANTA\t26\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202025\n254\t2020-06-18\t2020\t6\t18\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-06-17\t2020\t6\t17\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t45\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202025\n255\t2020-05-21\t2020\t5\t21\t13\tMANABI\t1308\tMANTA\t2020-04-24\t2020\t4\t24\t13\tMANABI\t1308\tMANTA\t39\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202021\n256\t2020-09-28\t2020\t9\t28\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-06-09\t2020\t6\t9\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t37\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202040\n257\t2020-09-30\t2020\t9\t30\t1\tAZUAY\t101\tCUENCA\t2020-09-25\t2020\t9\t25\t1\tAZUAY\t101\tCUENCA\t65\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202040\n258\t2020-04-07\t2020\t4\t7\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-07-04\t2020\t7\t4\t9\tGUAYAS\t901\tGUAYAQUIL\t28\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202015\n259\t2020-10-20\t2020\t10\t20\t1\tAZUAY\t101\tCUENCA\t2020-10-19\t2020\t10\t19\t1\tAZUAY\t101\tCUENCA\t65\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202043\n260\t2020-10-01\t2020\t10\t1\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-03-09\t2020\t3\t9\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t33\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202040\n261\t2020-09-17\t2020\t9\t17\t1\tAZUAY\t101\tCUENCA\t2020-08-09\t2020\t8\t9\t1\tAZUAY\t101\tCUENCA\t67\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202038\n262\t2020-06-17\t2020\t6\t17\t13\tMANABI\t1308\tMANTA\t2020-01-06\t2020\t1\t6\t1\tAZUAY\t101\tCUENCA\t36\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202025\n263\t2020-10-30\t2020\t10\t30\t8\tESMERALDAS\t801\tESMERALDAS\t2020-10-18\t2020\t10\t18\t8\tESMERALDAS\t804\tQUININDE\t28\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202044\n264\t2020-06-10\t2020\t6\t10\t17\tPICHINCHA\t1707\tSAN MIGUEL DE LOS BANCOS\t2020-09-06\t2020\t9\t6\t17\tPICHINCHA\t1707\tSAN MIGUEL DE LOS BANCOS\t30\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202024\n265\t2020-07-08\t2020\t7\t8\t1\tAZUAY\t105\tPAUTE\t2020-08-07\t2020\t8\t7\t1\tAZUAY\t105\tPAUTE\t72\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202028\n266\t2020-09-10\t2020\t9\t10\t18\tTUNGURAHUA\t1807\tSAN PEDRO DE PELILEO\t2020-07-09\t2020\t7\t9\t18\tTUNGURAHUA\t1807\tSAN PEDRO DE PELILEO\t28\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202037\n267\t2020-05-19\t2020\t5\t19\t7\tEL ORO\t701\tMACHALA\t2020-05-18\t2020\t5\t18\t7\tEL ORO\t701\tMACHALA\t27\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202021\n268\t2020-04-23\t2020\t4\t23\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-03-29\t2020\t3\t29\t9\tGUAYAS\t901\tGUAYAQUIL\t61\tANIOS\tHOMBRE\tMUERTO\t2020-04-01\t2020\t4\t1\tPROBABLE\t202017\n269\t2020-10-16\t2020\t10\t16\t10\tIMBABURA\t1001\tIBARRA\t2020-02-10\t2020\t2\t10\t10\tIMBABURA\t1001\tIBARRA\t29\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202042\n270\t2020-07-01\t2020\t7\t1\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t2020-01-07\t2020\t1\t7\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t35\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202027\n271\t2020-11-17\t2020\t11\t17\t7\tEL ORO\t701\tMACHALA\t2020-11-16\t2020\t11\t16\t7\tEL ORO\t709\tPASAJE\t68\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202047\n272\t2020-07-13\t2020\t7\t13\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-01-07\t2020\t1\t7\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t20\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202029\n273\t2020-04-28\t2020\t4\t28\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-04-28\t2020\t4\t28\t9\tGUAYAS\t901\tGUAYAQUIL\t29\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202018\n274\t2020-04-06\t2020\t4\t6\t12\tLOS RIOS\t1205\tQUEVEDO\t2020-01-04\t2020\t1\t4\t12\tLOS RIOS\t1210\tBUENA FE\t57\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202015\n275\t2020-11-11\t2020\t11\t11\t9\tGUAYAS\t920\tSAN JACINTO DE YAGUACHI\t2020-04-20\t2020\t4\t20\t9\tGUAYAS\t901\tGUAYAQUIL\t46\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202046\n276\t2020-06-08\t2020\t6\t8\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-08-06\t2020\t8\t6\t11\tLOJA\t1101\tLOJA\t36\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202024\n277\t2020-08-03\t2020\t8\t3\t13\tMANABI\t1301\tPORTOVIEJO\t2020-07-22\t2020\t7\t22\t13\tMANABI\t1314\tSUCRE\t72\tANIOS\tHOMBRE\tMUERTO\t2020-08-07\t2020\t8\t7\tPROBABLE\t202032\n278\t2020-09-01\t2020\t9\t1\t14\tMORONA SANTIAGO\t1407\tHUAMBOYA\t2020-01-09\t2020\t1\t9\t14\tMORONA SANTIAGO\t1407\tHUAMBOYA\t59\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202036\n279\t2020-11-05\t2020\t11\t5\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-01-05\t2020\t1\t5\t6\tCHIMBORAZO\t601\tRIOBAMBA\t38\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202045\n280\t2020-09-03\t2020\t9\t3\t1\tAZUAY\t101\tCUENCA\t2020-08-31\t2020\t8\t31\t1\tAZUAY\t101\tCUENCA\t54\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202036\n281\t2020-07-29\t2020\t7\t29\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-07-13\t2020\t7\t13\t9\tGUAYAS\t901\tGUAYAQUIL\t30\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202031\n282\t2020-08-28\t2020\t8\t28\t14\tMORONA SANTIAGO\t1401\tMORONA\t2020-08-27\t2020\t8\t27\t14\tMORONA SANTIAGO\t1401\tMORONA\t22\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202035\n283\t2020-10-26\t2020\t10\t26\t17\tPICHINCHA\t1703\tMEJIA\t2020-03-06\t2020\t3\t6\t17\tPICHINCHA\t1703\tMEJIA\t42\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202044\n284\t2020-03-24\t2020\t3\t24\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-03-22\t2020\t3\t22\t9\tGUAYAS\t901\tGUAYAQUIL\t49\tANIOS\tHOMBRE\tMUERTO\t2020-03-22\t2020\t3\t22\tPROBABLE\t202013\n285\t2020-10-15\t2020\t10\t15\t11\tLOJA\t1102\tCALVAS\t2020-12-10\t2020\t12\t10\t11\tLOJA\t1102\tCALVAS\t38\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202042\n286\t2020-10-28\t2020\t10\t28\t13\tMANABI\t1322\tSAN VICENTE\t2020-10-28\t2020\t10\t28\t13\tMANABI\t1322\tSAN VICENTE\t42\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202044\n287\t2020-10-15\t2020\t10\t15\t9\tGUAYAS\t927\tGNRAL. ANTONIO ELIZALDE\t2020-10-14\t2020\t10\t14\t9\tGUAYAS\t927\tGNRAL. ANTONIO ELIZALDE\t41\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202042\n288\t2020-09-03\t2020\t9\t3\t1\tAZUAY\t101\tCUENCA\t2020-08-31\t2020\t8\t31\t1\tAZUAY\t101\tCUENCA\t23\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202036\n289\t2020-09-19\t2020\t9\t19\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-07-27\t2020\t7\t27\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t31\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202038\n290\t2020-08-18\t2020\t8\t18\t1\tAZUAY\t101\tCUENCA\t2020-08-17\t2020\t8\t17\t1\tAZUAY\t101\tCUENCA\t43\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202034\n291\t2020-07-28\t2020\t7\t28\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-09-07\t2020\t9\t7\t9\tGUAYAS\t901\tGUAYAQUIL\t58\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202031\n292\t2020-11-30\t2020\t11\t30\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-11-18\t2020\t11\t18\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t16\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202049\n293\t2020-04-09\t2020\t4\t9\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-03-26\t2020\t3\t26\t12\tLOS RIOS\t1203\tMONTALVO\t27\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202015\n294\t2020-07-28\t2020\t7\t28\t12\tLOS RIOS\t1201\tBABAHOYO\t2020-07-27\t2020\t7\t27\t9\tGUAYAS\t901\tGUAYAQUIL\t77\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202031\n295\t2020-10-24\t2020\t10\t24\t1\tAZUAY\t101\tCUENCA\t2020-10-24\t2020\t10\t24\t1\tAZUAY\t101\tCUENCA\t47\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202043\n296\t2020-10-02\t2020\t10\t2\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-07-15\t2020\t7\t15\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t3\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202040\n297\t2020-10-29\t2020\t10\t29\t1\tAZUAY\t101\tCUENCA\t2020-10-27\t2020\t10\t27\t1\tAZUAY\t101\tCUENCA\t12\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202044\n298\t2020-11-12\t2020\t11\t12\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-07-11\t2020\t7\t11\t9\tGUAYAS\t907\tDURAN\t57\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202046\n299\t2020-06-10\t2020\t6\t10\t11\tLOJA\t1101\tLOJA\t2020-10-06\t2020\t10\t6\t11\tLOJA\t1101\tLOJA\t17\tANIOS\tHOMBRE\tMUERTO\t2020-06-11\t2020\t6\t11\tDESCARTADO\t202024\n300\t2020-10-05\t2020\t10\t5\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t2020-09-28\t2020\t9\t28\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t43\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202041\n301\t2020-07-03\t2020\t7\t3\t12\tLOS RIOS\t1201\tBABAHOYO\t2020-02-07\t2020\t2\t7\t12\tLOS RIOS\t1201\tBABAHOYO\t74\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202027\n302\t2020-10-16\t2020\t10\t16\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-10-15\t2020\t10\t15\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t27\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202042\n303\t2020-07-03\t2020\t7\t3\t19\tZAMORA CHINCHIPE\t1901\tZAMORA\t2020-03-07\t2020\t3\t7\t19\tZAMORA CHINCHIPE\t1901\tZAMORA\t101\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202027\n304\t2020-06-25\t2020\t6\t25\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t2020-06-23\t2020\t6\t23\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t30\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202026\n305\t2020-07-11\t2020\t7\t11\t14\tMORONA SANTIAGO\t1406\tSUCUA\t2020-10-07\t2020\t10\t7\t14\tMORONA SANTIAGO\t1406\tSUCUA\t33\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202028\n306\t2020-07-03\t2020\t7\t3\t12\tLOS RIOS\t1201\tBABAHOYO\t2020-02-07\t2020\t2\t7\t9\tGUAYAS\t901\tGUAYAQUIL\t50\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202027\n307\t2020-06-28\t2020\t6\t28\t8\tESMERALDAS\t806\tATACAMES\t2020-06-27\t2020\t6\t27\t8\tESMERALDAS\t803\tMUISNE\t62\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202027\n308\t2020-06-26\t2020\t6\t26\t12\tLOS RIOS\t1208\tVINCES\t2020-06-24\t2020\t6\t24\t12\tLOS RIOS\t1208\tVINCES\t50\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202026\n309\t2020-04-17\t2020\t4\t17\t8\tESMERALDAS\t801\tESMERALDAS\t2020-04-16\t2020\t4\t16\t8\tESMERALDAS\t801\tESMERALDAS\t65\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202016\n310\t2020-09-23\t2020\t9\t23\t13\tMANABI\t1301\tPORTOVIEJO\t2020-09-23\t2020\t9\t23\t13\tMANABI\t1301\tPORTOVIEJO\t77\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202039\n311\t2020-06-30\t2020\t6\t30\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t2020-06-26\t2020\t6\t26\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t19\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202027\n312\t2020-05-21\t2020\t5\t21\t7\tEL ORO\t707\tHUAQUILLAS\t2020-05-15\t2020\t5\t15\t7\tEL ORO\t707\tHUAQUILLAS\t65\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202021\n313\t2020-10-26\t2020\t10\t26\t8\tESMERALDAS\t804\tQUININDE\t2020-06-19\t2020\t6\t19\t8\tESMERALDAS\t804\tQUININDE\t4\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202044\n314\t2020-09-02\t2020\t9\t2\t8\tESMERALDAS\t806\tATACAMES\t2020-08-31\t2020\t8\t31\t8\tESMERALDAS\t806\tATACAMES\t32\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202036\n315\t2020-05-19\t2020\t5\t19\t12\tLOS RIOS\t1201\tBABAHOYO\t2020-05-18\t2020\t5\t18\t12\tLOS RIOS\t1201\tBABAHOYO\t42\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202021\n316\t2020-10-30\t2020\t10\t30\t11\tLOJA\t1101\tLOJA\t2020-10-29\t2020\t10\t29\t11\tLOJA\t1101\tLOJA\t36\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202044\n317\t2020-09-16\t2020\t9\t16\t9\tGUAYAS\t910\tMILAGRO\t2020-09-16\t2020\t9\t16\t9\tGUAYAS\t910\tMILAGRO\t38\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202038\n318\t2020-09-18\t2020\t9\t18\t12\tLOS RIOS\t1206\tURDANETA\t2020-09-17\t2020\t9\t17\t12\tLOS RIOS\t1206\tURDANETA\t45\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202038\n319\t2020-05-15\t2020\t5\t15\t9\tGUAYAS\t910\tMILAGRO\t2020-11-05\t2020\t11\t5\t9\tGUAYAS\t910\tMILAGRO\t38\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202020\n320\t2020-04-28\t2020\t4\t28\t13\tMANABI\t1304\tEL CARMEN\t2020-04-27\t2020\t4\t27\t13\tMANABI\t1304\tEL CARMEN\t40\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202018\n321\t2020-03-25\t2020\t3\t25\t9\tGUAYAS\t910\tMILAGRO\t2020-03-24\t2020\t3\t24\t9\tGUAYAS\t910\tMILAGRO\t59\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202013\n322\t2020-10-02\t2020\t10\t2\t13\tMANABI\t1308\tMANTA\t2020-09-15\t2020\t9\t15\t13\tMANABI\t1308\tMANTA\t53\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202040\n323\t2020-07-01\t2020\t7\t1\t12\tLOS RIOS\t1201\tBABAHOYO\t2020-06-18\t2020\t6\t18\t12\tLOS RIOS\t1201\tBABAHOYO\t57\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202027\n324\t2020-10-26\t2020\t10\t26\t13\tMANABI\t1308\tMANTA\t2020-11-09\t2020\t11\t9\t13\tMANABI\t1309\tMONTECRISTI\t47\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202044\n325\t2020-09-24\t2020\t9\t24\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-09-22\t2020\t9\t22\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t18\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202039\n326\t2020-04-19\t2020\t4\t19\t3\tCA�AR\t301\tAZOGUES\t2020-04-13\t2020\t4\t13\t3\tCA�AR\t301\tAZOGUES\t32\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202017\n327\t2020-05-29\t2020\t5\t29\t8\tESMERALDAS\t804\tQUININDE\t2020-05-28\t2020\t5\t28\t8\tESMERALDAS\t804\tQUININDE\t70\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202022\n328\t2020-07-04\t2020\t7\t4\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-03-07\t2020\t3\t7\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t50\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202027\n329\t2020-05-30\t2020\t5\t30\t9\tGUAYAS\t914\tPEDRO CARBO\t2020-05-20\t2020\t5\t20\t9\tGUAYAS\t914\tPEDRO CARBO\t58\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202022\n330\t2020-08-27\t2020\t8\t27\t13\tMANABI\t1305\tFLAVIO ALFARO\t2020-08-27\t2020\t8\t27\t13\tMANABI\t1305\tFLAVIO ALFARO\t61\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202035\n331\t2020-11-27\t2020\t11\t27\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-11-23\t2020\t11\t23\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t41\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202048\n332\t2020-10-24\t2020\t10\t24\t13\tMANABI\t1308\tMANTA\t2020-10-24\t2020\t10\t24\t13\tMANABI\t1321\tJARAMIJO\t26\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202043\n333\t2020-11-17\t2020\t11\t17\t7\tEL ORO\t701\tMACHALA\t2020-11-16\t2020\t11\t16\t7\tEL ORO\t701\tMACHALA\t21\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202047\n334\t2020-09-18\t2020\t9\t18\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t2020-09-15\t2020\t9\t15\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t31\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202038\n335\t2020-03-19\t2020\t3\t19\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t2020-03-19\t2020\t3\t19\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t27\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202012\n336\t2020-08-27\t2020\t8\t27\t13\tMANABI\t1305\tFLAVIO ALFARO\t2020-08-27\t2020\t8\t27\t13\tMANABI\t1305\tFLAVIO ALFARO\t36\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202035\n337\t2020-09-28\t2020\t9\t28\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t2020-09-25\t2020\t9\t25\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t21\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202040\n338\t2020-08-11\t2020\t8\t11\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-05-08\t2020\t5\t8\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t34\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202033\n339\t2020-10-29\t2020\t10\t29\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-06-26\t2020\t6\t26\t7\tEL ORO\t709\tPASAJE\t40\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202044\n340\t2020-10-20\t2020\t10\t20\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-10-19\t2020\t10\t19\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t38\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202043\n341\t2020-10-14\t2020\t10\t14\t9\tGUAYAS\t907\tDURAN\t2020-10-14\t2020\t10\t14\t9\tGUAYAS\t901\tGUAYAQUIL\t29\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202042\n342\t2020-08-14\t2020\t8\t14\t13\tMANABI\t1308\tMANTA\t2020-07-24\t2020\t7\t24\t13\tMANABI\t1308\tMANTA\t54\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202033\n343\t2020-04-13\t2020\t4\t13\t21\tSUCUMBIOS\t2101\tLAGO AGRIO\t2020-12-04\t2020\t12\t4\t21\tSUCUMBIOS\t2101\tLAGO AGRIO\t48\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202016\n344\t2020-09-28\t2020\t9\t28\t10\tIMBABURA\t1001\tIBARRA\t2020-09-23\t2020\t9\t23\t10\tIMBABURA\t1006\tSAN MIGUEL DE URCUQUI\t56\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202040\n345\t2020-07-02\t2020\t7\t2\t8\tESMERALDAS\t806\tATACAMES\t2020-01-07\t2020\t1\t7\t8\tESMERALDAS\t806\tATACAMES\t61\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202027\n346\t2020-07-13\t2020\t7\t13\t5\tCOTOPAXI\t501\tLATACUNGA\t2020-12-07\t2020\t12\t7\t5\tCOTOPAXI\t501\tLATACUNGA\t35\tANIOS\tHOMBRE\tMUERTO\t2020-07-21\t2020\t7\t21\tDESCARTADO\t202029\n347\t2020-10-28\t2020\t10\t28\t8\tESMERALDAS\t803\tMUISNE\t2020-10-27\t2020\t10\t27\t8\tESMERALDAS\t806\tATACAMES\t62\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202044\n348\t2020-09-20\t2020\t9\t20\t10\tIMBABURA\t1001\tIBARRA\t2020-01-08\t2020\t1\t8\t10\tIMBABURA\t1001\tIBARRA\t55\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202039\n349\t2020-07-01\t2020\t7\t1\t8\tESMERALDAS\t801\tESMERALDAS\t2020-01-07\t2020\t1\t7\t8\tESMERALDAS\t805\tSAN LORENZO\t66\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202027\n350\t2020-09-30\t2020\t9\t30\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-09-29\t2020\t9\t29\t8\tESMERALDAS\t801\tESMERALDAS\t10\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202040\n351\t2020-10-31\t2020\t10\t31\t1\tAZUAY\t101\tCUENCA\t2020-10-30\t2020\t10\t30\t1\tAZUAY\t101\tCUENCA\t58\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202044\n352\t2020-07-21\t2020\t7\t21\t11\tLOJA\t1101\tLOJA\t2020-07-20\t2020\t7\t20\t11\tLOJA\t1101\tLOJA\t18\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202030\n353\t2020-09-18\t2020\t9\t18\t12\tLOS RIOS\t1206\tURDANETA\t2020-03-09\t2020\t3\t9\t12\tLOS RIOS\t1206\tURDANETA\t57\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202038\n354\t2020-08-31\t2020\t8\t31\t13\tMANABI\t1304\tEL CARMEN\t2020-05-08\t2020\t5\t8\t13\tMANABI\t1304\tEL CARMEN\t48\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202036\n355\t2020-11-23\t2020\t11\t23\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-10-19\t2020\t10\t19\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t25\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202048\n356\t2020-10-12\t2020\t10\t12\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-04-06\t2020\t4\t6\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t48\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202042\n357\t2020-05-16\t2020\t5\t16\t7\tEL ORO\t701\tMACHALA\t2020-05-14\t2020\t5\t14\t7\tEL ORO\t701\tMACHALA\t30\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202020\n358\t2020-10-29\t2020\t10\t29\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-08-06\t2020\t8\t6\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t31\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202044\n359\t2020-09-18\t2020\t9\t18\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-11-06\t2020\t11\t6\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202038\n360\t2020-06-08\t2020\t6\t8\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-07-06\t2020\t7\t6\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t26\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202024\n361\t2020-07-04\t2020\t7\t4\t14\tMORONA SANTIAGO\t1409\tTAISHA\t2020-02-07\t2020\t2\t7\t14\tMORONA SANTIAGO\t1409\tTAISHA\t45\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202027\n362\t2020-09-27\t2020\t9\t27\t4\tCARCHI\t403\tESPEJO\t2020-09-26\t2020\t9\t26\t4\tCARCHI\t403\tESPEJO\t55\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202040\n363\t2020-10-16\t2020\t10\t16\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-02-10\t2020\t2\t10\t17\tPICHINCHA\t1705\tRUMI�AHUI\t22\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202042\n364\t2020-06-01\t2020\t6\t1\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-01-06\t2020\t1\t6\t9\tGUAYAS\t901\tGUAYAQUIL\t27\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202023\n365\t2020-10-12\t2020\t10\t12\t7\tEL ORO\t701\tMACHALA\t2020-11-10\t2020\t11\t10\t7\tEL ORO\t701\tMACHALA\t5\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202042\n366\t2020-09-01\t2020\t9\t1\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-08-29\t2020\t8\t29\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t37\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202036\n367\t2020-07-02\t2020\t7\t2\t13\tMANABI\t1301\tPORTOVIEJO\t2020-06-22\t2020\t6\t22\t13\tMANABI\t1312\tROCAFUERTE\t39\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202027\n368\t2020-08-04\t2020\t8\t4\t13\tMANABI\t1303\tCHONE\t2020-04-08\t2020\t4\t8\t13\tMANABI\t1303\tCHONE\t56\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202032\n369\t2020-04-24\t2020\t4\t24\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t2020-04-24\t2020\t4\t24\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t32\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202017\n370\t2020-10-17\t2020\t10\t17\t24\tSANTA ELENA\t2401\tSANTA ELENA\t2020-10-16\t2020\t10\t16\t24\tSANTA ELENA\t2401\tSANTA ELENA\t60\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202042\n371\t2020-09-29\t2020\t9\t29\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-02-09\t2020\t2\t9\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t50\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202040\n372\t2020-10-08\t2020\t10\t8\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-08-09\t2020\t8\t9\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t55\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202041\n373\t2020-11-04\t2020\t11\t4\t13\tMANABI\t1303\tCHONE\t2020-04-11\t2020\t4\t11\t13\tMANABI\t1303\tCHONE\t34\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202045\n374\t2020-08-04\t2020\t8\t4\t13\tMANABI\t1303\tCHONE\t2020-04-08\t2020\t4\t8\t13\tMANABI\t1303\tCHONE\t33\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202032\n375\t2020-06-22\t2020\t6\t22\t13\tMANABI\t1303\tCHONE\t2020-06-22\t2020\t6\t22\t13\tMANABI\t1303\tCHONE\t39\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202026\n376\t2020-10-28\t2020\t10\t28\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-06-10\t2020\t6\t10\t9\tGUAYAS\t901\tGUAYAQUIL\t22\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202044\n377\t2020-11-06\t2020\t11\t6\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-01-05\t2020\t1\t5\t17\tPICHINCHA\t1705\tRUMI�AHUI\t39\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202045\n378\t2020-06-28\t2020\t6\t28\t1\tAZUAY\t101\tCUENCA\t2020-06-28\t2020\t6\t28\t1\tAZUAY\t101\tCUENCA\t26\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202027\n379\t2020-09-14\t2020\t9\t14\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-08-09\t2020\t8\t9\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t48\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202038\n380\t2020-05-23\t2020\t5\t23\t13\tMANABI\t1301\tPORTOVIEJO\t2020-05-18\t2020\t5\t18\t13\tMANABI\t1301\tPORTOVIEJO\t54\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202021\n381\t2020-08-18\t2020\t8\t18\t4\tCARCHI\t403\tESPEJO\t2020-08-18\t2020\t8\t18\t4\tCARCHI\t403\tESPEJO\t83\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202034\n382\t2020-10-29\t2020\t10\t29\t1\tAZUAY\t101\tCUENCA\t2020-10-27\t2020\t10\t27\t1\tAZUAY\t101\tCUENCA\t34\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202044\n383\t2020-10-07\t2020\t10\t7\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-10-07\t2020\t10\t7\t22\tORELLANA\t2201\tORELLANA\t32\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202041\n384\t2020-11-26\t2020\t11\t26\t1\tAZUAY\t101\tCUENCA\t2020-11-16\t2020\t11\t16\t1\tAZUAY\t101\tCUENCA\t29\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202048\n385\t2020-10-08\t2020\t10\t8\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-08-09\t2020\t8\t9\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t48\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202041\n386\t2020-11-19\t2020\t11\t19\t7\tEL ORO\t701\tMACHALA\t2020-11-18\t2020\t11\t18\t7\tEL ORO\t701\tMACHALA\t8\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202047\n387\t2020-11-24\t2020\t11\t24\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-06-16\t2020\t6\t16\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t35\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202048\n388\t2020-11-25\t2020\t11\t25\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-11-19\t2020\t11\t19\t9\tGUAYAS\t901\tGUAYAQUIL\t34\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202048\n389\t2020-06-16\t2020\t6\t16\t18\tTUNGURAHUA\t1807\tSAN PEDRO DE PELILEO\t2020-06-16\t2020\t6\t16\t18\tTUNGURAHUA\t1807\tSAN PEDRO DE PELILEO\t74\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202025\n390\t2020-04-10\t2020\t4\t10\t9\tGUAYAS\t906\tDAULE\t2020-09-04\t2020\t9\t4\t9\tGUAYAS\t901\tGUAYAQUIL\t26\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202015\n391\t2020-07-27\t2020\t7\t27\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t2020-07-20\t2020\t7\t20\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t42\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202031\n392\t2020-08-14\t2020\t8\t14\t12\tLOS RIOS\t1201\tBABAHOYO\t2020-08-14\t2020\t8\t14\t12\tLOS RIOS\t1201\tBABAHOYO\t36\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202033\n393\t2020-08-18\t2020\t8\t18\t4\tCARCHI\t403\tESPEJO\t2020-08-18\t2020\t8\t18\t4\tCARCHI\t403\tESPEJO\t15\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202034\n394\t2020-10-18\t2020\t10\t18\t21\tSUCUMBIOS\t2105\tSUCUMBIOS\t2020-07-27\t2020\t7\t27\t21\tSUCUMBIOS\t2104\tSHUSHUFINDI\t35\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202043\n395\t2020-05-31\t2020\t5\t31\t4\tCARCHI\t403\tESPEJO\t2020-05-30\t2020\t5\t30\t4\tCARCHI\t403\tESPEJO\t31\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202023\n396\t2020-11-26\t2020\t11\t26\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-11-11\t2020\t11\t11\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t24\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202048\n397\t2020-11-30\t2020\t11\t30\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-05-10\t2020\t5\t10\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t39\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202049\n398\t2020-07-20\t2020\t7\t20\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-07-14\t2020\t7\t14\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t57\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202030\n399\t2020-05-04\t2020\t5\t4\t13\tMANABI\t1301\tPORTOVIEJO\t2020-04-29\t2020\t4\t29\t13\tMANABI\t1301\tPORTOVIEJO\t24\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202019\n400\t2020-11-11\t2020\t11\t11\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-11-09\t2020\t11\t9\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t50\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202046\n401\t2020-08-18\t2020\t8\t18\t4\tCARCHI\t403\tESPEJO\t2020-08-18\t2020\t8\t18\t4\tCARCHI\t403\tESPEJO\t39\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202034\n402\t2020-08-04\t2020\t8\t4\t13\tMANABI\t1301\tPORTOVIEJO\t2020-03-08\t2020\t3\t8\t13\tMANABI\t1301\tPORTOVIEJO\t31\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202032\n403\t2020-06-03\t2020\t6\t3\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t2020-02-06\t2020\t2\t6\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t55\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202023\n404\t2020-10-21\t2020\t10\t21\t13\tMANABI\t1303\tCHONE\t2020-10-21\t2020\t10\t21\t13\tMANABI\t1303\tCHONE\t39\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202043\n405\t2020-10-28\t2020\t10\t28\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-11-07\t2020\t11\t7\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t32\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202044\n406\t2020-05-05\t2020\t5\t5\t12\tLOS RIOS\t1207\tVENTANAS\t2020-04-05\t2020\t4\t5\t12\tLOS RIOS\t1201\tBABAHOYO\t43\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202019\n407\t2020-10-16\t2020\t10\t16\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-06-07\t2020\t6\t7\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t28\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202042\n408\t2020-07-10\t2020\t7\t10\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-09-07\t2020\t9\t7\t9\tGUAYAS\t901\tGUAYAQUIL\t42\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202028\n409\t2020-07-27\t2020\t7\t27\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t2020-07-21\t2020\t7\t21\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t69\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202031\n410\t2020-07-21\t2020\t7\t21\t12\tLOS RIOS\t1205\tQUEVEDO\t2020-05-18\t2020\t5\t18\t12\tLOS RIOS\t1205\tQUEVEDO\t45\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202030\n411\t2020-11-26\t2020\t11\t26\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-06-22\t2020\t6\t22\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t47\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202048\n412\t2020-09-25\t2020\t9\t25\t8\tESMERALDAS\t806\tATACAMES\t2020-09-25\t2020\t9\t25\t8\tESMERALDAS\t806\tATACAMES\t48\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202039\n413\t2020-07-11\t2020\t7\t11\t4\tCARCHI\t402\tBOLIVAR\t2020-08-07\t2020\t8\t7\t4\tCARCHI\t402\tBOLIVAR\t56\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202028\n414\t2020-09-02\t2020\t9\t2\t12\tLOS RIOS\t1205\tQUEVEDO\t2020-08-28\t2020\t8\t28\t12\tLOS RIOS\t1205\tQUEVEDO\t24\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202036\n415\t2020-08-26\t2020\t8\t26\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-08-25\t2020\t8\t25\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t23\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202035\n416\t2020-11-11\t2020\t11\t11\t7\tEL ORO\t701\tMACHALA\t2020-10-11\t2020\t10\t11\t7\tEL ORO\t701\tMACHALA\t17\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202046\n417\t2020-10-06\t2020\t10\t6\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-09-07\t2020\t9\t7\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t24\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202041\n418\t2020-11-13\t2020\t11\t13\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-08-31\t2020\t8\t31\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t23\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202046\n419\t2020-06-11\t2020\t6\t11\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t2020-11-06\t2020\t11\t6\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t29\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202024\n420\t2020-08-13\t2020\t8\t13\t1\tAZUAY\t101\tCUENCA\t2020-11-08\t2020\t11\t8\t1\tAZUAY\t101\tCUENCA\t44\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202033\n421\t2020-07-30\t2020\t7\t30\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2302\tLA CONCORDIA\t2020-07-30\t2020\t7\t30\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2302\tLA CONCORDIA\t59\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202031\n422\t2020-07-22\t2020\t7\t22\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-05-18\t2020\t5\t18\t9\tGUAYAS\t901\tGUAYAQUIL\t35\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202030\n423\t2020-10-19\t2020\t10\t19\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-01-10\t2020\t1\t10\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t25\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202043\n424\t2020-07-15\t2020\t7\t15\t1\tAZUAY\t101\tCUENCA\t2020-10-07\t2020\t10\t7\t1\tAZUAY\t101\tCUENCA\t6\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202029\n425\t2020-06-25\t2020\t6\t25\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-06-18\t2020\t6\t18\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t48\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202026\n426\t2020-09-17\t2020\t9\t17\t14\tMORONA SANTIAGO\t1406\tSUCUA\t2020-09-14\t2020\t9\t14\t14\tMORONA SANTIAGO\t1406\tSUCUA\t76\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202038\n427\t2020-11-06\t2020\t11\t6\t1\tAZUAY\t105\tPAUTE\t2020-06-11\t2020\t6\t11\t1\tAZUAY\t105\tPAUTE\t30\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202045\n428\t2020-03-30\t2020\t3\t30\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-03-30\t2020\t3\t30\t9\tGUAYAS\t901\tGUAYAQUIL\t61\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202014\n429\t2020-08-14\t2020\t8\t14\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-06-07\t2020\t6\t7\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t25\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202033\n430\t2020-10-30\t2020\t10\t30\t1\tAZUAY\t101\tCUENCA\t2020-10-30\t2020\t10\t30\t1\tAZUAY\t105\tPAUTE\t24\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202044\n431\t2020-10-08\t2020\t10\t8\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-06-10\t2020\t6\t10\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t48\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202041\n432\t2020-08-17\t2020\t8\t17\t16\tPASTAZA\t1601\tPASTAZA\t2020-08-13\t2020\t8\t13\t16\tPASTAZA\t1601\tPASTAZA\t66\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202034\n433\t2020-05-16\t2020\t5\t16\t19\tZAMORA CHINCHIPE\t1905\tYANTZAZA\t2020-05-15\t2020\t5\t15\t19\tZAMORA CHINCHIPE\t1905\tYANTZAZA\t68\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202020\n434\t2020-08-15\t2020\t8\t15\t17\tPICHINCHA\t1702\tCAYAMBE\t2020-08-15\t2020\t8\t15\t17\tPICHINCHA\t1702\tCAYAMBE\t40\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202033\n435\t2020-10-02\t2020\t10\t2\t10\tIMBABURA\t1001\tIBARRA\t2020-11-07\t2020\t11\t7\t10\tIMBABURA\t1001\tIBARRA\t44\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202040\n436\t2020-10-08\t2020\t10\t8\t13\tMANABI\t1306\tJIPIJAPA\t2020-08-10\t2020\t8\t10\t13\tMANABI\t1306\tJIPIJAPA\t46\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202041\n437\t2020-09-04\t2020\t9\t4\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-03-09\t2020\t3\t9\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t75\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202036\n438\t2020-05-16\t2020\t5\t16\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2302\tLA CONCORDIA\t2020-05-16\t2020\t5\t16\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2302\tLA CONCORDIA\t43\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202020\n439\t2020-06-29\t2020\t6\t29\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-06-25\t2020\t6\t25\t9\tGUAYAS\t901\tGUAYAQUIL\t27\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202027\n440\t2020-08-09\t2020\t8\t9\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-07-31\t2020\t7\t31\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t36\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202033\n441\t2020-05-21\t2020\t5\t21\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2302\tLA CONCORDIA\t2020-05-21\t2020\t5\t21\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2302\tLA CONCORDIA\t81\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202021\n442\t2020-09-21\t2020\t9\t21\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-09-18\t2020\t9\t18\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t37\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202039\n443\t2020-04-06\t2020\t4\t6\t12\tLOS RIOS\t1201\tBABAHOYO\t2020-06-04\t2020\t6\t4\t12\tLOS RIOS\t1201\tBABAHOYO\t60\tANIOS\tHOMBRE\tMUERTO\t2020-04-07\t2020\t4\t7\tDESCARTADO\t202015\n444\t2020-08-21\t2020\t8\t21\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-11-08\t2020\t11\t8\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t33\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202034\n445\t2020-11-20\t2020\t11\t20\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-09-10\t2020\t9\t10\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t16\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202047\n446\t2020-04-06\t2020\t4\t6\t13\tMANABI\t1304\tEL CARMEN\t2020-05-04\t2020\t5\t4\t13\tMANABI\t1304\tEL CARMEN\t71\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202015\n447\t2020-08-19\t2020\t8\t19\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-02-07\t2020\t2\t7\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t59\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202034\n448\t2020-10-15\t2020\t10\t15\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-04-08\t2020\t4\t8\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t57\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202042\n449\t2020-10-20\t2020\t10\t20\t22\tORELLANA\t2204\tLORETO\t2020-09-14\t2020\t9\t14\t22\tORELLANA\t2201\tORELLANA\t34\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202043\n450\t2020-07-02\t2020\t7\t2\t8\tESMERALDAS\t805\tSAN LORENZO\t2020-01-07\t2020\t1\t7\t8\tESMERALDAS\t805\tSAN LORENZO\t52\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202027\n451\t2020-07-16\t2020\t7\t16\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-10-07\t2020\t10\t7\t17\tPICHINCHA\t1704\tPEDRO MONCAYO\t33\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202029\n452\t2020-04-06\t2020\t4\t6\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-03-23\t2020\t3\t23\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t62\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202015\n453\t2020-11-25\t2020\t11\t25\t17\tPICHINCHA\t1702\tCAYAMBE\t2020-08-21\t2020\t8\t21\t17\tPICHINCHA\t1702\tCAYAMBE\t32\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202048\n454\t2020-05-04\t2020\t5\t4\t20\tGALAPAGOS\t2002\tISABELA\t2020-04-27\t2020\t4\t27\t20\tGALAPAGOS\t2002\tISABELA\t42\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202019\n455\t2020-06-12\t2020\t6\t12\t17\tPICHINCHA\t1705\tRUMI�AHUI\t2020-05-06\t2020\t5\t6\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t36\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202024\n456\t2020-08-12\t2020\t8\t12\t12\tLOS RIOS\t1201\tBABAHOYO\t2020-12-08\t2020\t12\t8\t12\tLOS RIOS\t1201\tBABAHOYO\t45\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202033\n457\t2020-06-22\t2020\t6\t22\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-06-20\t2020\t6\t20\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t41\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202026\n458\t2020-04-16\t2020\t4\t16\t21\tSUCUMBIOS\t2101\tLAGO AGRIO\t2020-04-16\t2020\t4\t16\t21\tSUCUMBIOS\t2101\tLAGO AGRIO\t54\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202016\n459\t2020-10-27\t2020\t10\t27\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-06-19\t2020\t6\t19\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t31\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202044\n460\t2020-11-27\t2020\t11\t27\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-11-17\t2020\t11\t17\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t37\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202048\n461\t2020-09-18\t2020\t9\t18\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-09-17\t2020\t9\t17\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t77\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202038\n462\t2020-07-15\t2020\t7\t15\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-07-14\t2020\t7\t14\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t33\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202029\n463\t2020-07-23\t2020\t7\t23\t18\tTUNGURAHUA\t1801\tAMBATO\t2020-07-20\t2020\t7\t20\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t22\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202030\n464\t2020-06-08\t2020\t6\t8\t13\tMANABI\t1313\tSANTA ANA\t2020-08-06\t2020\t8\t6\t13\tMANABI\t1301\tPORTOVIEJO\t22\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202024\n465\t2020-10-27\t2020\t10\t27\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-06-24\t2020\t6\t24\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t34\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202044\n466\t2020-05-22\t2020\t5\t22\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t2020-05-20\t2020\t5\t20\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t32\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202021\n467\t2020-08-26\t2020\t8\t26\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-04-06\t2020\t4\t6\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t30\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202035\n468\t2020-10-13\t2020\t10\t13\t22\tORELLANA\t2204\tLORETO\t2020-08-21\t2020\t8\t21\t22\tORELLANA\t2201\tORELLANA\t33\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202042\n469\t2020-09-25\t2020\t9\t25\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-09-24\t2020\t9\t24\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t43\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202039\n470\t2020-11-11\t2020\t11\t11\t12\tLOS RIOS\t1212\tMOCACHE\t2020-06-05\t2020\t6\t5\t12\tLOS RIOS\t1210\tBUENA FE\t34\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202046\n471\t2020-09-03\t2020\t9\t3\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-08-31\t2020\t8\t31\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t38\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202036\n472\t2020-05-07\t2020\t5\t7\t13\tMANABI\t1308\tMANTA\t2020-05-05\t2020\t5\t5\t13\tMANABI\t1308\tMANTA\t87\tANIOS\tHOMBRE\tMUERTO\t2020-05-18\t2020\t5\t18\tCONFIRMADO\t202019\n473\t2020-09-17\t2020\t9\t17\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-07-27\t2020\t7\t27\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t31\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202038\n474\t2020-09-16\t2020\t9\t16\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-04-28\t2020\t4\t28\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t39\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202038\n475\t2020-10-10\t2020\t10\t10\t13\tMANABI\t1308\tMANTA\t2020-09-10\t2020\t9\t10\t13\tMANABI\t1308\tMANTA\t42\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202041\n476\t2020-09-02\t2020\t9\t2\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-08-27\t2020\t8\t27\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t63\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202036\n477\t2020-10-09\t2020\t10\t9\t13\tMANABI\t1321\tJARAMIJO\t2020-05-22\t2020\t5\t22\t13\tMANABI\t1308\tMANTA\t50\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202041\n478\t2020-08-05\t2020\t8\t5\t4\tCARCHI\t402\tBOLIVAR\t2020-03-08\t2020\t3\t8\t4\tCARCHI\t402\tBOLIVAR\t26\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202032\n479\t2020-07-29\t2020\t7\t29\t13\tMANABI\t1308\tMANTA\t2020-07-20\t2020\t7\t20\t13\tMANABI\t1308\tMANTA\t53\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202031\n480\t2020-07-20\t2020\t7\t20\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-07-17\t2020\t7\t17\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t53\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202030\n481\t2020-09-06\t2020\t9\t6\t13\tMANABI\t1308\tMANTA\t2020-04-09\t2020\t4\t9\t13\tMANABI\t1308\tMANTA\t51\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202037\n482\t2020-11-23\t2020\t11\t23\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-08-06\t2020\t8\t6\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t23\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202048\n483\t2020-06-16\t2020\t6\t16\t13\tMANABI\t1308\tMANTA\t2020-10-06\t2020\t10\t6\t13\tMANABI\t1308\tMANTA\t24\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202025\n484\t2020-10-27\t2020\t10\t27\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-10-19\t2020\t10\t19\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t24\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202044\n485\t2020-06-13\t2020\t6\t13\t13\tMANABI\t1308\tMANTA\t2020-11-06\t2020\t11\t6\t13\tMANABI\t1308\tMANTA\t60\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202024\n486\t2020-10-21\t2020\t10\t21\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-10-20\t2020\t10\t20\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t61\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202043\n487\t2020-04-30\t2020\t4\t30\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-04-15\t2020\t4\t15\t9\tGUAYAS\t901\tGUAYAQUIL\t50\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202018\n488\t2020-05-31\t2020\t5\t31\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-05-31\t2020\t5\t31\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t24\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202023\n489\t2020-03-29\t2020\t3\t29\t16\tPASTAZA\t1601\tPASTAZA\t2020-03-28\t2020\t3\t28\t16\tPASTAZA\t1601\tPASTAZA\t51\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202014\n490\t2020-05-25\t2020\t5\t25\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-05-25\t2020\t5\t25\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t31\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202022\n491\t2020-08-14\t2020\t8\t14\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-08-14\t2020\t8\t14\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t70\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202033\n492\t2020-09-28\t2020\t9\t28\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-08-16\t2020\t8\t16\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t29\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202040\n493\t2020-11-18\t2020\t11\t18\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-06-10\t2020\t6\t10\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t48\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202047\n494\t2020-10-14\t2020\t10\t14\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-07-10\t2020\t7\t10\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t22\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202042\n495\t2020-10-02\t2020\t10\t2\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-07-21\t2020\t7\t21\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t42\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202040\n496\t2020-09-30\t2020\t9\t30\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-08-14\t2020\t8\t14\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t24\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202040\n497\t2020-09-21\t2020\t9\t21\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-09-21\t2020\t9\t21\t9\tGUAYAS\t901\tGUAYAQUIL\t14\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202039\n498\t2020-06-08\t2020\t6\t8\t14\tMORONA SANTIAGO\t1409\tTAISHA\t2020-05-06\t2020\t5\t6\t14\tMORONA SANTIAGO\t1409\tTAISHA\t55\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202024\n499\t2020-06-20\t2020\t6\t20\t8\tESMERALDAS\t802\tELOY ALFARO\t2020-06-19\t2020\t6\t19\t8\tESMERALDAS\t802\tELOY ALFARO\t23\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202025\n500\t2020-09-28\t2020\t9\t28\t17\tPICHINCHA\t1702\tCAYAMBE\t2020-09-28\t2020\t9\t28\t17\tPICHINCHA\t1702\tCAYAMBE\t26\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202040\n501\t2020-06-26\t2020\t6\t26\t4\tCARCHI\t401\tTULCAN\t2020-06-25\t2020\t6\t25\t4\tCARCHI\t401\tTULCAN\t66\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202026\n502\t2020-10-19\t2020\t10\t19\t8\tESMERALDAS\t806\tATACAMES\t2020-10-18\t2020\t10\t18\t8\tESMERALDAS\t801\tESMERALDAS\t43\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202043\n503\t2020-05-07\t2020\t5\t7\t8\tESMERALDAS\t801\tESMERALDAS\t2020-07-05\t2020\t7\t5\t8\tESMERALDAS\t801\tESMERALDAS\t26\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202019\n504\t2020-06-05\t2020\t6\t5\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-04-06\t2020\t4\t6\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t27\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202023\n505\t2020-06-16\t2020\t6\t16\t8\tESMERALDAS\t802\tELOY ALFARO\t2020-06-16\t2020\t6\t16\t8\tESMERALDAS\t801\tESMERALDAS\t55\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202025\n506\t2020-06-12\t2020\t6\t12\t22\tORELLANA\t2201\tORELLANA\t2020-08-06\t2020\t8\t6\t22\tORELLANA\t2203\tLA JOYA DE LOS SACHAS\t27\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202024\n507\t2020-04-15\t2020\t4\t15\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-07-04\t2020\t7\t4\t9\tGUAYAS\t901\tGUAYAQUIL\t38\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202016\n508\t2020-06-08\t2020\t6\t8\t18\tTUNGURAHUA\t1801\tAMBATO\t2020-04-06\t2020\t4\t6\t18\tTUNGURAHUA\t1801\tAMBATO\t47\tANIOS\tHOMBRE\tMUERTO\t2020-06-05\t2020\t6\t5\tCONFIRMADO\t202024\n509\t2020-09-10\t2020\t9\t10\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-09-09\t2020\t9\t9\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t74\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202037\n510\t2020-07-08\t2020\t7\t8\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-06-29\t2020\t6\t29\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t63\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202028\n511\t2020-07-28\t2020\t7\t28\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-07-28\t2020\t7\t28\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t60\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202031\n512\t2020-05-14\t2020\t5\t14\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-04-20\t2020\t4\t20\t9\tGUAYAS\t901\tGUAYAQUIL\t64\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202020\n513\t2020-11-26\t2020\t11\t26\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-11-26\t2020\t11\t26\t10\tIMBABURA\t1001\tIBARRA\t26\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202048\n514\t2020-07-08\t2020\t7\t8\t13\tMANABI\t1301\tPORTOVIEJO\t2020-06-29\t2020\t6\t29\t13\tMANABI\t1315\tTOSAGUA\t27\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202028\n515\t2020-11-30\t2020\t11\t30\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-12-10\t2020\t12\t10\t10\tIMBABURA\t1001\tIBARRA\t26\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202049\n516\t2020-09-01\t2020\t9\t1\t13\tMANABI\t1315\tTOSAGUA\t2020-01-09\t2020\t1\t9\t13\tMANABI\t1315\tTOSAGUA\t29\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202036\n517\t2020-09-25\t2020\t9\t25\t4\tCARCHI\t401\tTULCAN\t2020-09-25\t2020\t9\t25\t4\tCARCHI\t401\tTULCAN\t35\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202039\n518\t2020-08-19\t2020\t8\t19\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-09-08\t2020\t9\t8\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t27\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202034\n519\t2020-08-31\t2020\t8\t31\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t2020-08-25\t2020\t8\t25\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t31\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202036\n520\t2020-07-13\t2020\t7\t13\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-06-07\t2020\t6\t7\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t41\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202029\n521\t2020-06-12\t2020\t6\t12\t21\tSUCUMBIOS\t2105\tSUCUMBIOS\t2020-12-06\t2020\t12\t6\t21\tSUCUMBIOS\t2105\tSUCUMBIOS\t56\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202024\n522\t2020-10-01\t2020\t10\t1\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-05-08\t2020\t5\t8\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t35\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202040\n523\t2020-10-22\t2020\t10\t22\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-10-21\t2020\t10\t21\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t42\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202043\n524\t2020-09-19\t2020\t9\t19\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-08-30\t2020\t8\t30\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t64\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202038\n525\t2020-10-06\t2020\t10\t6\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-08-15\t2020\t8\t15\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t96\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202041\n526\t2020-09-30\t2020\t9\t30\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-07-17\t2020\t7\t17\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t23\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202040\n527\t2020-10-02\t2020\t10\t2\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-07-13\t2020\t7\t13\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t33\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202040\n528\t2020-04-22\t2020\t4\t22\t18\tTUNGURAHUA\t1801\tAMBATO\t2020-04-22\t2020\t4\t22\t18\tTUNGURAHUA\t1801\tAMBATO\t32\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202017\n529\t2020-10-27\t2020\t10\t27\t4\tCARCHI\t401\tTULCAN\t2020-10-26\t2020\t10\t26\t4\tCARCHI\t405\tMONTUFAR\t89\tANIOS\tHOMBRE\tMUERTO\t2020-10-28\t2020\t10\t28\tCONFIRMADO\t202044\n530\t2020-09-28\t2020\t9\t28\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-09-25\t2020\t9\t25\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t41\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202040\n531\t2020-05-22\t2020\t5\t22\t18\tTUNGURAHUA\t1801\tAMBATO\t2020-05-22\t2020\t5\t22\t6\tCHIMBORAZO\t601\tRIOBAMBA\t33\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202021\n532\t2020-08-31\t2020\t8\t31\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-06-29\t2020\t6\t29\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t36\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202036\n533\t2020-07-24\t2020\t7\t24\t6\tCHIMBORAZO\t601\tRIOBAMBA\t2020-07-23\t2020\t7\t23\t6\tCHIMBORAZO\t601\tRIOBAMBA\t24\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202030\n534\t2020-11-05\t2020\t11\t5\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-06-23\t2020\t6\t23\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t30\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202045\n535\t2020-08-04\t2020\t8\t4\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t2020-04-08\t2020\t4\t8\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t42\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202032\n536\t2020-05-14\t2020\t5\t14\t18\tTUNGURAHUA\t1801\tAMBATO\t2020-05-14\t2020\t5\t14\t18\tTUNGURAHUA\t1801\tAMBATO\t66\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202020\n537\t2020-10-13\t2020\t10\t13\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-07-29\t2020\t7\t29\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t29\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202042\n538\t2020-09-28\t2020\t9\t28\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-08-13\t2020\t8\t13\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t37\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202040\n539\t2020-10-07\t2020\t10\t7\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-09-28\t2020\t9\t28\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t25\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202041\n540\t2020-11-11\t2020\t11\t11\t7\tEL ORO\t701\tMACHALA\t2020-11-11\t2020\t11\t11\t7\tEL ORO\t707\tHUAQUILLAS\t34\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202046\n541\t2020-07-04\t2020\t7\t4\t10\tIMBABURA\t1001\tIBARRA\t2020-03-07\t2020\t3\t7\t10\tIMBABURA\t1001\tIBARRA\t29\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202027\n542\t2020-06-19\t2020\t6\t19\t24\tSANTA ELENA\t2403\tSALINAS\t2020-06-19\t2020\t6\t19\t24\tSANTA ELENA\t2402\tLA LIBERTAD\t11\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202025\n543\t2020-06-19\t2020\t6\t19\t24\tSANTA ELENA\t2403\tSALINAS\t2020-06-19\t2020\t6\t19\t24\tSANTA ELENA\t2402\tLA LIBERTAD\t44\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202025\n544\t2020-09-02\t2020\t9\t2\t13\tMANABI\t1315\tTOSAGUA\t2020-02-09\t2020\t2\t9\t13\tMANABI\t1315\tTOSAGUA\t45\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202036\n545\t2020-10-27\t2020\t10\t27\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-10-26\t2020\t10\t26\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t32\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202044\n546\t2020-11-25\t2020\t11\t25\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-11-22\t2020\t11\t22\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t43\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202048\n547\t2020-04-29\t2020\t4\t29\t13\tMANABI\t1301\tPORTOVIEJO\t2020-04-28\t2020\t4\t28\t13\tMANABI\t1301\tPORTOVIEJO\t69\tANIOS\tHOMBRE\tMUERTO\t2020-05-02\t2020\t5\t2\tCONFIRMADO\t202018\n548\t2020-10-03\t2020\t10\t3\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-10-09\t2020\t10\t9\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t39\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202040\n549\t2020-03-25\t2020\t3\t25\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-03-25\t2020\t3\t25\t9\tGUAYAS\t901\tGUAYAQUIL\t22\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202013\n550\t2020-05-28\t2020\t5\t28\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-05-28\t2020\t5\t28\t9\tGUAYAS\t901\tGUAYAQUIL\t35\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202022\n551\t2020-06-07\t2020\t6\t7\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-06-30\t2020\t6\t30\t9\tGUAYAS\t901\tGUAYAQUIL\t29\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202024\n552\t2020-04-30\t2020\t4\t30\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-04-28\t2020\t4\t28\t9\tGUAYAS\t901\tGUAYAQUIL\t35\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202018\n553\t2020-05-28\t2020\t5\t28\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-05-25\t2020\t5\t25\t9\tGUAYAS\t901\tGUAYAQUIL\t40\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202022\n554\t2020-07-28\t2020\t7\t28\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-08-07\t2020\t8\t7\t9\tGUAYAS\t916\tSAMBORONDON\t47\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202031\n555\t2020-07-29\t2020\t7\t29\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-07-23\t2020\t7\t23\t9\tGUAYAS\t901\tGUAYAQUIL\t12\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202031\n556\t2020-09-30\t2020\t9\t30\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-07-09\t2020\t7\t9\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t41\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202040\n557\t2020-11-12\t2020\t11\t12\t17\tPICHINCHA\t1702\tCAYAMBE\t2020-07-14\t2020\t7\t14\t17\tPICHINCHA\t1702\tCAYAMBE\t27\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202046\n558\t2020-10-01\t2020\t10\t1\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-04-09\t2020\t4\t9\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t46\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202040\n559\t2020-08-31\t2020\t8\t31\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t2020-08-25\t2020\t8\t25\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t54\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202036\n560\t2020-09-04\t2020\t9\t4\t13\tMANABI\t1307\tJUNIN\t2020-02-09\t2020\t2\t9\t13\tMANABI\t1307\tJUNIN\t62\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202036\n561\t2020-07-29\t2020\t7\t29\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-07-27\t2020\t7\t27\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t47\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202031\n562\t2020-06-05\t2020\t6\t5\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-05-29\t2020\t5\t29\t9\tGUAYAS\t901\tGUAYAQUIL\t28\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202023\n563\t2020-07-24\t2020\t7\t24\t4\tCARCHI\t401\tTULCAN\t2020-07-23\t2020\t7\t23\t4\tCARCHI\t401\tTULCAN\t39\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202030\n564\t2020-06-19\t2020\t6\t19\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-06-17\t2020\t6\t17\t9\tGUAYAS\t901\tGUAYAQUIL\t65\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202025\n565\t2020-07-25\t2020\t7\t25\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-07-20\t2020\t7\t20\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t35\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202030\n566\t2020-04-07\t2020\t4\t7\t9\tGUAYAS\t916\tSAMBORONDON\t2020-07-04\t2020\t7\t4\t9\tGUAYAS\t916\tSAMBORONDON\t15\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202015\n567\t2020-09-05\t2020\t9\t5\t10\tIMBABURA\t1001\tIBARRA\t2020-02-09\t2020\t2\t9\t10\tIMBABURA\t1001\tIBARRA\t60\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202036\n568\t2020-10-15\t2020\t10\t15\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-12-05\t2020\t12\t5\t9\tGUAYAS\t901\tGUAYAQUIL\t38\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202042\n569\t2020-05-05\t2020\t5\t5\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-05-05\t2020\t5\t5\t9\tGUAYAS\t901\tGUAYAQUIL\t51\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202019\n570\t2020-06-30\t2020\t6\t30\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t2020-06-22\t2020\t6\t22\t23\tSANTO DOMINGO DE LOS TSACHILAS\t2301\tSANTO DOMINGO\t34\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202027\n571\t2020-04-24\t2020\t4\t24\t9\tGUAYAS\t906\tDAULE\t2020-04-22\t2020\t4\t22\t9\tGUAYAS\t906\tDAULE\t25\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202017\n572\t2020-07-31\t2020\t7\t31\t10\tIMBABURA\t1001\tIBARRA\t2020-07-30\t2020\t7\t30\t10\tIMBABURA\t1001\tIBARRA\t33\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202031\n573\t2020-04-08\t2020\t4\t8\t9\tGUAYAS\t928\tISIDRO AYORA\t2020-07-04\t2020\t7\t4\t9\tGUAYAS\t928\tISIDRO AYORA\t62\tANIOS\tHOMBRE\tMUERTO\t2020-04-13\t2020\t4\t13\tCONFIRMADO\t202015\n574\t2020-08-05\t2020\t8\t5\t10\tIMBABURA\t1003\tCOTACACHI\t2020-03-08\t2020\t3\t8\t10\tIMBABURA\t1003\tCOTACACHI\t35\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202032\n575\t2020-10-20\t2020\t10\t20\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-10-19\t2020\t10\t19\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t27\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202043\n576\t2020-07-13\t2020\t7\t13\t8\tESMERALDAS\t805\tSAN LORENZO\t2020-10-07\t2020\t10\t7\t8\tESMERALDAS\t805\tSAN LORENZO\t22\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202029\n577\t2020-06-03\t2020\t6\t3\t9\tGUAYAS\t925\tNOBOL\t2020-02-06\t2020\t2\t6\t9\tGUAYAS\t925\tNOBOL\t58\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202023\n578\t2020-09-22\t2020\t9\t22\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-04-08\t2020\t4\t8\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t43\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202039\n579\t2020-09-08\t2020\t9\t8\t13\tMANABI\t1310\tPAJAN\t2020-08-09\t2020\t8\t9\t13\tMANABI\t1310\tPAJAN\t73\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202037\n580\t2020-07-21\t2020\t7\t21\t10\tIMBABURA\t1001\tIBARRA\t2020-07-20\t2020\t7\t20\t10\tIMBABURA\t1001\tIBARRA\t60\tANIOS\tHOMBRE\tMUERTO\t2020-07-27\t2020\t7\t27\tCONFIRMADO\t202030\n581\t2020-10-14\t2020\t10\t14\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-07-27\t2020\t7\t27\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t25\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202042\n582\t2020-10-20\t2020\t10\t20\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-10-19\t2020\t10\t19\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t19\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202043\n583\t2020-06-26\t2020\t6\t26\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-06-25\t2020\t6\t25\t9\tGUAYAS\t901\tGUAYAQUIL\t37\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202026\n584\t2020-10-22\t2020\t10\t22\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-10-21\t2020\t10\t21\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t24\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202043\n585\t2020-04-09\t2020\t4\t9\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-03-27\t2020\t3\t27\t9\tGUAYAS\t907\tDURAN\t45\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202015\n586\t2020-10-01\t2020\t10\t1\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-08-09\t2020\t8\t9\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t27\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202040\n587\t2020-06-04\t2020\t6\t4\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-04-06\t2020\t4\t6\t9\tGUAYAS\t901\tGUAYAQUIL\t60\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202023\n588\t2020-10-01\t2020\t10\t1\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-08-09\t2020\t8\t9\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t28\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202040\n589\t2020-05-02\t2020\t5\t2\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-01-05\t2020\t1\t5\t9\tGUAYAS\t901\tGUAYAQUIL\t23\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202018\n590\t2020-10-14\t2020\t10\t14\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-10-13\t2020\t10\t13\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t60\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202042\n591\t2020-03-27\t2020\t3\t27\t9\tGUAYAS\t909\tEL TRIUNFO\t2020-03-26\t2020\t3\t26\t9\tGUAYAS\t901\tGUAYAQUIL\t68\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202013\n592\t2020-06-17\t2020\t6\t17\t17\tPICHINCHA\t1705\tRUMI�AHUI\t2020-06-16\t2020\t6\t16\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t34\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202025\n593\t2020-09-01\t2020\t9\t1\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-01-09\t2020\t1\t9\t9\tGUAYAS\t901\tGUAYAQUIL\t30\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202036\n594\t2020-09-30\t2020\t9\t30\t10\tIMBABURA\t1001\tIBARRA\t2020-08-14\t2020\t8\t14\t10\tIMBABURA\t1001\tIBARRA\t46\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202040\n595\t2020-07-13\t2020\t7\t13\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-04-29\t2020\t4\t29\t9\tGUAYAS\t901\tGUAYAQUIL\t64\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202029\n596\t2020-09-17\t2020\t9\t17\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-09-16\t2020\t9\t16\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t40\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202038\n597\t2020-09-23\t2020\t9\t23\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-02-09\t2020\t2\t9\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t28\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202039\n598\t2020-10-27\t2020\t10\t27\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-06-07\t2020\t6\t7\t17\tPICHINCHA\t1702\tCAYAMBE\t45\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202044\n599\t2020-05-27\t2020\t5\t27\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-03-30\t2020\t3\t30\t9\tGUAYAS\t901\tGUAYAQUIL\t39\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202022\n600\t2020-08-20\t2020\t8\t20\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-01-08\t2020\t1\t8\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t41\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202034\n601\t2020-09-10\t2020\t9\t10\t7\tEL ORO\t701\tMACHALA\t2020-10-09\t2020\t10\t9\t7\tEL ORO\t701\tMACHALA\t27\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202037\n602\t2020-10-29\t2020\t10\t29\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-05-08\t2020\t5\t8\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t49\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202044\n603\t2020-09-07\t2020\t9\t7\t16\tPASTAZA\t1601\tPASTAZA\t2020-03-09\t2020\t3\t9\t16\tPASTAZA\t1601\tPASTAZA\t75\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202037\n604\t2020-11-06\t2020\t11\t6\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-05-11\t2020\t5\t11\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t34\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202045\n605\t2020-07-13\t2020\t7\t13\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-03-07\t2020\t3\t7\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t35\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202029\n606\t2020-09-16\t2020\t9\t16\t4\tCARCHI\t401\tTULCAN\t2020-09-15\t2020\t9\t15\t4\tCARCHI\t401\tTULCAN\t56\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202038\n607\t2020-07-26\t2020\t7\t26\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-07-24\t2020\t7\t24\t20\tGALAPAGOS\t2003\tSANTA CRUZ\t39\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202031\n608\t2020-07-26\t2020\t7\t26\t4\tCARCHI\t405\tMONTUFAR\t2020-07-23\t2020\t7\t23\t4\tCARCHI\t405\tMONTUFAR\t26\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202031\n609\t2020-09-09\t2020\t9\t9\t9\tGUAYAS\t901\tGUAYAQUIL\t2020-09-09\t2020\t9\t9\t9\tGUAYAS\t901\tGUAYAQUIL\t31\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202037\n610\t2020-10-05\t2020\t10\t5\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-08-28\t2020\t8\t28\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t42\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202041\n611\t2020-08-24\t2020\t8\t24\t1\tAZUAY\t105\tPAUTE\t2020-08-24\t2020\t8\t24\t1\tAZUAY\t105\tPAUTE\t50\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202035\n612\t2020-06-15\t2020\t6\t15\t10\tIMBABURA\t1001\tIBARRA\t2020-06-13\t2020\t6\t13\t10\tIMBABURA\t1001\tIBARRA\t81\tANIOS\tHOMBRE\tMUERTO\t2020-06-14\t2020\t6\t14\tDESCARTADO\t202025\n613\t2020-07-13\t2020\t7\t13\t8\tESMERALDAS\t805\tSAN LORENZO\t2020-10-07\t2020\t10\t7\t8\tESMERALDAS\t805\tSAN LORENZO\t60\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tPROBABLE\t202029\n614\t2020-04-16\t2020\t4\t16\t4\tCARCHI\t401\tTULCAN\t2020-04-15\t2020\t4\t15\t4\tCARCHI\t406\tSAN PEDRO DE HUACA\t43\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202016\n615\t2020-07-23\t2020\t7\t23\t22\tORELLANA\t2203\tLA JOYA DE LOS SACHAS\t2020-07-18\t2020\t7\t18\t22\tORELLANA\t2203\tLA JOYA DE LOS SACHAS\t31\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202030\n616\t2020-08-14\t2020\t8\t14\t4\tCARCHI\t405\tMONTUFAR\t2020-11-08\t2020\t11\t8\t4\tCARCHI\t405\tMONTUFAR\t38\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202033\n617\t2020-11-14\t2020\t11\t14\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-09-25\t2020\t9\t25\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t46\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tCONFIRMADO\t202046\n618\t2020-11-04\t2020\t11\t4\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t2020-10-26\t2020\t10\t26\t17\tPICHINCHA\t1701\tDISTRITO METROPOLITANO DE QUITO\t53\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202045\n619\t2020-09-30\t2020\t9\t30\t9\tGUAYAS\t916\tSAMBORONDON\t2020-09-29\t2020\t9\t29\t9\tGUAYAS\t916\tSAMBORONDON\t40\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202040\n620\t2020-10-20\t2020\t10\t20\t9\tGUAYAS\t916\tSAMBORONDON\t2020-10-20\t2020\t10\t20\t9\tGUAYAS\t916\tSAMBORONDON\t40\tANIOS\tHOMBRE\tVIVO\tnull\t0\t0\t0\tDESCARTADO\t202043"
+          },
+          {
+            "type": "HTML",
+            "data": "<div class=\"result-alert alert-warning\" role=\"alert\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button><strong>Output is truncated</strong> to 102400 bytes. Learn more about <strong>ZEPPELIN_INTERPRETER_OUTPUT_LIMIT</strong></div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=0",
+              "$$hashKey": "object:24882"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1752717447086_207039509",
+      "id": "paragraph_1752717447086_207039509",
+      "dateCreated": "2025-07-16T20:57:27-0500",
+      "dateStarted": "2025-07-25T11:00:00-0500",
+      "dateFinished": "2025-07-25T11:00:05-0500",
+      "status": "FINISHED",
+      "$$hashKey": "object:15277"
+    },
+    {
+      "text": "%md\n# Consultas acerca de la base de datos",
+      "user": "anonymous",
+      "dateUpdated": "2025-07-25T11:14:10-0500",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h1>Consultas acerca de la base de datos</h1>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1752717600117_1954037782",
+      "id": "paragraph_1752717600117_1954037782",
+      "dateCreated": "2025-07-16T21:00:00-0500",
+      "dateStarted": "2025-07-25T11:14:10-0500",
+      "dateFinished": "2025-07-25T11:14:10-0500",
+      "status": "FINISHED",
+      "$$hashKey": "object:15278"
+    },
+    {
+      "text": "%md\n# CONSULTA 1",
+      "user": "anonymous",
+      "dateUpdated": "2025-07-25T11:00:05-0500",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h1>CONSULTA 1</h1>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1753024670493_158944877",
+      "id": "paragraph_1753024670493_158944877",
+      "dateCreated": "2025-07-20T10:17:50-0500",
+      "dateStarted": "2025-07-25T11:00:05-0500",
+      "dateFinished": "2025-07-25T11:00:05-0500",
+      "status": "FINISHED",
+      "$$hashKey": "object:15279"
+    },
+    {
+      "text": "%md\n### Datos atipicos de pacientes por su edad en años",
+      "user": "anonymous",
+      "dateUpdated": "2025-07-25T11:00:05-0500",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h3>Datos atipicos de pacientes por su edad en años</h3>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1752720453220_92104215",
+      "id": "paragraph_1752720453220_92104215",
+      "dateCreated": "2025-07-16T21:47:33-0500",
+      "dateStarted": "2025-07-25T11:00:05-0500",
+      "dateFinished": "2025-07-25T11:00:05-0500",
+      "status": "FINISHED",
+      "$$hashKey": "object:15280"
+    },
+    {
+      "text": "data.filter($\"tipo_edad\" === \"ANIOS\").describe(\"edad_paciente\").show",
+      "user": "anonymous",
+      "dateUpdated": "2025-07-25T11:00:06-0500",
+      "progress": 25,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-------+------------------+\n|summary|     edad_paciente|\n+-------+------------------+\n|  count|           2852025|\n|   mean| 39.42392896275454|\n| stddev|17.770730550421177|\n|    min|                 1|\n|    max|               136|\n+-------+------------------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=1",
+              "$$hashKey": "object:27531"
+            },
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=2",
+              "$$hashKey": "object:27532"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1752719590676_1841341834",
+      "id": "paragraph_1752719590676_1841341834",
+      "dateCreated": "2025-07-16T21:33:10-0500",
+      "dateStarted": "2025-07-25T11:00:06-0500",
+      "dateFinished": "2025-07-25T11:00:14-0500",
+      "status": "FINISHED",
+      "$$hashKey": "object:15281"
+    },
+    {
+      "text": "%mysql\nSELECT \n\t tipo_edad,\n     COUNT(edad_paciente) AS 'Conteo',\n     AVG(edad_paciente) AS 'Promedio',\n     STDDEV(edad_paciente) AS 'Desv. Estandar',\n     MIN(edad_paciente) AS 'Minimo',\n     MAX(edad_paciente) AS 'Maximo'\nFROM m_covid\nGROUP BY tipo_edad;",
+      "user": "anonymous",
+      "dateUpdated": "2025-07-25T11:00:15-0500",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "tipo_edad": "string",
+                      "Conteo": "string",
+                      "Promedio": "string",
+                      " Estandar": "string",
+                      "Minimo": "string",
+                      "Maximo": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "stackedAreaChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "tipo_edad",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "count",
+                  "index": 1,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "tipo_edad\tConteo\tPromedio\t Estandar\tMinimo\tMaximo\nANIOS\t2852025\t39.4239\t17.77072743496206\t1\t136\nMESES\t7462\t6.0503\t3.2435771330575354\t1\t11\nDIAS\t4546\t5.8713\t7.045133230048723\t0\t30\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1752980196889_1117877156",
+      "id": "paragraph_1752980196889_1117877156",
+      "dateCreated": "2025-07-19T21:56:36-0500",
+      "dateStarted": "2025-07-25T11:00:15-0500",
+      "dateFinished": "2025-07-25T11:00:26-0500",
+      "status": "FINISHED",
+      "$$hashKey": "object:15282"
+    },
+    {
+      "text": "%md\n# CONSULTA 2",
+      "user": "anonymous",
+      "dateUpdated": "2025-07-25T11:00:26-0500",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h1>CONSULTA 2</h1>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1753024686022_905937577",
+      "id": "paragraph_1753024686022_905937577",
+      "dateCreated": "2025-07-20T10:18:06-0500",
+      "dateStarted": "2025-07-25T11:00:26-0500",
+      "dateFinished": "2025-07-25T11:00:26-0500",
+      "status": "FINISHED",
+      "$$hashKey": "object:15283"
+    },
+    {
+      "text": "%md\n## Grafica de total de casos por edades en años",
+      "user": "anonymous",
+      "dateUpdated": "2025-07-25T11:14:00-0500",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>Grafica de total de casos por edades en años</h2>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1752720483872_1149256506",
+      "id": "paragraph_1752720483872_1149256506",
+      "dateCreated": "2025-07-16T21:48:03-0500",
+      "dateStarted": "2025-07-25T11:14:00-0500",
+      "dateFinished": "2025-07-25T11:14:00-0500",
+      "status": "FINISHED",
+      "$$hashKey": "object:15284"
+    },
+    {
+      "text": "z.show(\n    data.filter($\"tipo_edad\" === \"ANIOS\").groupBy(\"edad_paciente\").count\n)",
+      "user": "anonymous",
+      "dateUpdated": "2025-07-25T11:00:27-0500",
+      "progress": 75,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "multiBarChart",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "edad_paciente": "string",
+                      "count": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "edad_paciente",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "count",
+                  "index": 1,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "edad_paciente\tcount\n31\t72770\n85\t4877\n65\t22378\n53\t36619\n78\t8787\n108\t11\n34\t70142\n101\t115\n115\t3\n81\t7049\n28\t72901\n76\t10402\n26\t67718\n27\t70846\n44\t48640\n103\t55\n12\t15062\n91\t2242\n22\t50126\n93\t1368\n47\t43331\n1\t8345\n52\t37404\n13\t16534\n16\t22818\n86\t4335\n6\t9797\n3\t8289\n40\t58713\n20\t44597\n94\t1128\n57\t34487\n54\t35942\n120\t15\n96\t701\n48\t42699\n5\t9318\n19\t39254\n92\t1787\n64\t23661\n41\t56487\n43\t51081\n15\t20683\n37\t62953\n61\t27865\n88\t3596\n107\t6\n17\t26573\n9\t12238\n72\t13780\n35\t68469\n59\t31589\n4\t8919\n55\t35612\n8\t10947\n100\t167\n39\t60745\n23\t53610\n49\t41623\n7\t10251\n84\t5276\n87\t3957\n51\t40793\n69\t17062\n97\t482\n63\t24608\n77\t9628\n10\t13065\n102\t67\n50\t40516\n45\t46533\n38\t62735\n82\t6437\n80\t7638\n25\t64143\n73\t13046\n24\t59561\n70\t16263\n62\t25684\n95\t851\n29\t72104\n21\t48391\n98\t351\n32\t73186\n60\t29519\n90\t2740\n75\t11444\n56\t35356\n105\t15\n58\t33363\n33\t71974\n11\t14078\n83\t5815\n110\t2\n71\t14840\n68\t17835\n106\t7\n14\t18552\n42\t54272\n119\t2\n2\t8104\n79\t8205\n118\t1\n30\t72791\n99\t273\n66\t20906\n46\t43965\n67\t19543\n18\t32323\n74\t12391\n104\t37\n36\t65751\n89\t3068\n114\t1\n121\t7\n109\t2\n122\t2\n113\t2\n116\t1\n136\t1\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=3",
+              "$$hashKey": "object:28240"
+            },
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=4",
+              "$$hashKey": "object:28241"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1752719921725_1504259445",
+      "id": "paragraph_1752719921725_1504259445",
+      "dateCreated": "2025-07-16T21:38:41-0500",
+      "dateStarted": "2025-07-25T11:00:27-0500",
+      "dateFinished": "2025-07-25T11:00:33-0500",
+      "status": "FINISHED",
+      "$$hashKey": "object:15285"
+    },
+    {
+      "text": "%mysql\nSELECT edad_paciente, COUNT(*)\nFROM m_covid\nWHERE tipo_edad = 'ANIOS'\nGROUP BY edad_paciente\nORDER BY edad_paciente ASC;",
+      "user": "anonymous",
+      "dateUpdated": "2025-07-25T11:00:33-0500",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "multiBarChart",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "edad_paciente": "string",
+                      "COUNT(*)": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "edad_paciente",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "COUNT(*)",
+                  "index": 1,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "edad_paciente\tCOUNT(*)\n1\t8345\n2\t8104\n3\t8289\n4\t8919\n5\t9318\n6\t9797\n7\t10251\n8\t10947\n9\t12238\n10\t13065\n11\t14078\n12\t15062\n13\t16534\n14\t18552\n15\t20683\n16\t22818\n17\t26573\n18\t32323\n19\t39254\n20\t44597\n21\t48391\n22\t50126\n23\t53610\n24\t59561\n25\t64143\n26\t67718\n27\t70846\n28\t72901\n29\t72104\n30\t72791\n31\t72770\n32\t73186\n33\t71974\n34\t70142\n35\t68469\n36\t65751\n37\t62953\n38\t62735\n39\t60745\n40\t58713\n41\t56487\n42\t54272\n43\t51081\n44\t48640\n45\t46533\n46\t43965\n47\t43331\n48\t42699\n49\t41623\n50\t40516\n51\t40793\n52\t37404\n53\t36619\n54\t35942\n55\t35612\n56\t35356\n57\t34487\n58\t33363\n59\t31589\n60\t29519\n61\t27865\n62\t25684\n63\t24608\n64\t23661\n65\t22378\n66\t20906\n67\t19543\n68\t17835\n69\t17062\n70\t16263\n71\t14840\n72\t13780\n73\t13046\n74\t12391\n75\t11444\n76\t10402\n77\t9628\n78\t8787\n79\t8205\n80\t7638\n81\t7049\n82\t6437\n83\t5815\n84\t5276\n85\t4877\n86\t4335\n87\t3957\n88\t3596\n89\t3068\n90\t2740\n91\t2242\n92\t1787\n93\t1368\n94\t1128\n95\t851\n96\t701\n97\t482\n98\t351\n99\t273\n100\t167\n101\t115\n102\t67\n103\t55\n104\t37\n105\t15\n106\t7\n107\t6\n108\t11\n109\t2\n110\t2\n113\t2\n114\t1\n115\t3\n116\t1\n118\t1\n119\t2\n120\t15\n121\t7\n122\t2\n136\t1\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1752981947138_1099218654",
+      "id": "paragraph_1752981947138_1099218654",
+      "dateCreated": "2025-07-19T22:25:47-0500",
+      "dateStarted": "2025-07-25T11:00:33-0500",
+      "dateFinished": "2025-07-25T11:00:37-0500",
+      "status": "FINISHED",
+      "$$hashKey": "object:15286"
+    },
+    {
+      "text": "%md\n# CONSULTA 3",
+      "user": "anonymous",
+      "dateUpdated": "2025-07-25T11:00:37-0500",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h1>CONSULTA 3</h1>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1753024717277_233726267",
+      "id": "paragraph_1753024717277_233726267",
+      "dateCreated": "2025-07-20T10:18:37-0500",
+      "dateStarted": "2025-07-25T11:00:38-0500",
+      "dateFinished": "2025-07-25T11:00:38-0500",
+      "status": "FINISHED",
+      "$$hashKey": "object:15287"
+    },
+    {
+      "text": "%md\n## Cantidad de los casos segun su clasificacion final",
+      "user": "anonymous",
+      "dateUpdated": "2025-07-25T11:14:24-0500",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>Cantidad de los casos segun su clasificacion final</h2>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1752720404576_373442661",
+      "id": "paragraph_1752720404576_373442661",
+      "dateCreated": "2025-07-16T21:46:44-0500",
+      "dateStarted": "2025-07-25T11:14:24-0500",
+      "dateFinished": "2025-07-25T11:14:24-0500",
+      "status": "FINISHED",
+      "$$hashKey": "object:15288"
+    },
+    {
+      "text": "z.show(\n    data.groupBy($\"clasificacion_final\").pivot($\"anio_notificacion\").count\n)",
+      "user": "anonymous",
+      "dateUpdated": "2025-07-25T11:00:38-0500",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "editorHide": false,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "multiBarChart",
+              "height": 510,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "2020": "string",
+                      "2021": "string",
+                      "2022": "string",
+                      "clasificacion_final": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "clasificacion_final",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "2020",
+                  "index": 1,
+                  "aggr": "sum"
+                },
+                {
+                  "name": "2021",
+                  "index": 2,
+                  "aggr": "sum"
+                },
+                {
+                  "name": "2022",
+                  "index": 3,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "clasificacion_final\t2020\t2021\t2022\nCONFIRMADO\t229068\t373458\t260705\nCON SOSPECHA\tnull\tnull\t11543\nPROBABLE\t84311\t84279\t23224\nDESCARTADO\t496040\t981146\t320259\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=5",
+              "$$hashKey": "object:28651"
+            },
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=6",
+              "$$hashKey": "object:28652"
+            },
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=7",
+              "$$hashKey": "object:28653"
+            },
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=8",
+              "$$hashKey": "object:28654"
+            },
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=9",
+              "$$hashKey": "object:28655"
+            },
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=10",
+              "$$hashKey": "object:28656"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1752721262272_1488651468",
+      "id": "paragraph_1752721262272_1488651468",
+      "dateCreated": "2025-07-16T22:01:02-0500",
+      "dateStarted": "2025-07-25T11:00:38-0500",
+      "dateFinished": "2025-07-25T11:00:47-0500",
+      "status": "FINISHED",
+      "$$hashKey": "object:15289"
+    },
+    {
+      "text": "%mysql\nSELECT clasificacion_final, anio_notificacion, COUNT(*)\nFROM m_covid\nGROUP BY clasificacion_final, anio_notificacion;",
+      "user": "anonymous",
+      "dateUpdated": "2025-07-25T11:00:47-0500",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "editorHide": false,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "multiBarChart",
+              "height": 510,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "clasificacion_final": "string",
+                      "anio_notificacion": "string",
+                      "COUNT(*)": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "clasificacion_final",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [
+                {
+                  "name": "anio_notificacion",
+                  "index": 1,
+                  "aggr": "sum"
+                }
+              ],
+              "values": [
+                {
+                  "name": "COUNT(*)",
+                  "index": 2,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "clasificacion_final\tanio_notificacion\tCOUNT(*)\nDESCARTADO\t2020\t496040\nCONFIRMADO\t2020\t229068\nPROBABLE\t2020\t84311\nDESCARTADO\t2021\t981146\nCONFIRMADO\t2021\t373458\nPROBABLE\t2021\t84279\nPROBABLE\t2022\t23224\nDESCARTADO\t2022\t320259\nCON SOSPECHA\t2022\t11543\nCONFIRMADO\t2022\t260705\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1752983067789_1202565727",
+      "id": "paragraph_1752983067789_1202565727",
+      "dateCreated": "2025-07-19T22:44:27-0500",
+      "dateStarted": "2025-07-25T11:00:47-0500",
+      "dateFinished": "2025-07-25T11:00:52-0500",
+      "status": "FINISHED",
+      "$$hashKey": "object:15290"
+    },
+    {
+      "text": "%mysql\nSELECT \n    clasificacion_final,\n    COUNT(CASE WHEN anio_notificacion = 2020 THEN 1 END) AS `2020`,\n    COUNT(CASE WHEN anio_notificacion = 2021 THEN 1 END) AS `2021`,\n    COUNT(CASE WHEN anio_notificacion = 2022 THEN 1 END) AS `2022`\nFROM m_covid\nGROUP BY clasificacion_final;",
+      "user": "anonymous",
+      "dateUpdated": "2025-07-25T11:00:53-0500",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "multiBarChart",
+              "height": 550,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "2020": "string",
+                      "2021": "string",
+                      "2022": "string",
+                      "clasificacion_final": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "clasificacion_final",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "2020",
+                  "index": 1,
+                  "aggr": "sum"
+                },
+                {
+                  "name": "2021",
+                  "index": 2,
+                  "aggr": "sum"
+                },
+                {
+                  "name": "2022",
+                  "index": 3,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "clasificacion_final\t2020\t2021\t2022\nDESCARTADO\t496040\t981146\t320259\nCONFIRMADO\t229068\t373458\t260705\nPROBABLE\t84311\t84279\t23224\nCON SOSPECHA\t0\t0\t11543\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1752983493648_1891590750",
+      "id": "paragraph_1752983493648_1891590750",
+      "dateCreated": "2025-07-19T22:51:33-0500",
+      "dateStarted": "2025-07-25T11:00:53-0500",
+      "dateFinished": "2025-07-25T11:00:59-0500",
+      "status": "FINISHED",
+      "$$hashKey": "object:15291"
+    },
+    {
+      "text": "%md\n# CONSULTA 4",
+      "user": "anonymous",
+      "dateUpdated": "2025-07-25T11:01:16-0500",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h1>CONSULTA 4</h1>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1753024747692_1233400256",
+      "id": "paragraph_1753024747692_1233400256",
+      "dateCreated": "2025-07-20T10:19:07-0500",
+      "dateStarted": "2025-07-25T11:01:16-0500",
+      "dateFinished": "2025-07-25T11:01:16-0500",
+      "status": "FINISHED",
+      "$$hashKey": "object:15294"
+    },
+    {
+      "text": "%md\n## Grafica de casos confirmados de cada mes agrupados por año",
+      "user": "anonymous",
+      "dateUpdated": "2025-07-25T11:01:16-0500",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>Grafica de casos confirmados de cada mes agrupados por año</h2>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1752761457318_790254283",
+      "id": "paragraph_1752761457318_790254283",
+      "dateCreated": "2025-07-17T09:10:57-0500",
+      "dateStarted": "2025-07-25T11:01:16-0500",
+      "dateFinished": "2025-07-25T11:01:16-0500",
+      "status": "FINISHED",
+      "$$hashKey": "object:15295"
+    },
+    {
+      "text": "z.show(data.filter($\"clasificacion_final\" === \"CONFIRMADO\").groupBy(\"anio_notificacion\").pivot(\"mes_notificacion\").count.orderBy(\"anio_notificacion\"))",
+      "user": "anonymous",
+      "dateUpdated": "2025-07-25T11:01:16-0500",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "multiBarChart",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "1": "string",
+                      "2": "string",
+                      "3": "string",
+                      "4": "string",
+                      "5": "string",
+                      "6": "string",
+                      "7": "string",
+                      "8": "string",
+                      "9": "string",
+                      "10": "string",
+                      "11": "string",
+                      "12": "string",
+                      "anio_notificacion": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "anio_notificacion",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "1",
+                  "index": 1,
+                  "aggr": "sum"
+                },
+                {
+                  "name": "2",
+                  "index": 2,
+                  "aggr": "sum"
+                },
+                {
+                  "name": "3",
+                  "index": 3,
+                  "aggr": "sum"
+                },
+                {
+                  "name": "4",
+                  "index": 4,
+                  "aggr": "sum"
+                },
+                {
+                  "name": "5",
+                  "index": 5,
+                  "aggr": "sum"
+                },
+                {
+                  "name": "6",
+                  "index": 6,
+                  "aggr": "sum"
+                },
+                {
+                  "name": "7",
+                  "index": 7,
+                  "aggr": "sum"
+                },
+                {
+                  "name": "8",
+                  "index": 8,
+                  "aggr": "sum"
+                },
+                {
+                  "name": "9",
+                  "index": 9,
+                  "aggr": "sum"
+                },
+                {
+                  "name": "10",
+                  "index": 10,
+                  "aggr": "sum"
+                },
+                {
+                  "name": "11",
+                  "index": 11,
+                  "aggr": "sum"
+                },
+                {
+                  "name": "12",
+                  "index": 12,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "anio_notificacion\t1\t2\t3\t4\t5\t6\t7\t8\t9\t10\t11\t12\n2020\tnull\t6\t4411\t16750\t16086\t21172\t33206\t26229\t33578\t24741\t24476\t28413\n2021\t49894\t44122\t50783\t57165\t41671\t35337\t28859\t15475\t9227\t8024\t9788\t23113\n2022\t170363\t69992\t19955\t395\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=19",
+              "$$hashKey": "object:30751"
+            },
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=20",
+              "$$hashKey": "object:30752"
+            },
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=21",
+              "$$hashKey": "object:30753"
+            },
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=22",
+              "$$hashKey": "object:30754"
+            },
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=23",
+              "$$hashKey": "object:30755"
+            },
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=24",
+              "$$hashKey": "object:30756"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1752761285632_1267582864",
+      "id": "paragraph_1752761285632_1267582864",
+      "dateCreated": "2025-07-17T09:08:05-0500",
+      "dateStarted": "2025-07-25T11:01:16-0500",
+      "dateFinished": "2025-07-25T11:01:27-0500",
+      "status": "FINISHED",
+      "$$hashKey": "object:15296"
+    },
+    {
+      "text": "%mysql\nSELECT \n  anio_notificacion,\n  mes_notificacion,\n  COUNT(*) AS total_confirmados\nFROM m_covid\nWHERE clasificacion_final = 'CONFIRMADO'\nGROUP BY anio_notificacion, mes_notificacion\nORDER BY anio_notificacion, mes_notificacion;",
+      "user": "anonymous",
+      "dateUpdated": "2025-07-25T11:01:27-0500",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "multiBarChart",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "anio_notificacion": "string",
+                      "mes_notificacion": "string",
+                      "total_confirmados": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "anio_notificacion",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [
+                {
+                  "name": "mes_notificacion",
+                  "index": 1,
+                  "aggr": "sum"
+                }
+              ],
+              "values": [
+                {
+                  "name": "total_confirmados",
+                  "index": 2,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "anio_notificacion\tmes_notificacion\ttotal_confirmados\n2020\t2\t6\n2020\t3\t4411\n2020\t4\t16750\n2020\t5\t16086\n2020\t6\t21172\n2020\t7\t33206\n2020\t8\t26229\n2020\t9\t33578\n2020\t10\t24741\n2020\t11\t24476\n2020\t12\t28413\n2021\t1\t49894\n2021\t2\t44122\n2021\t3\t50783\n2021\t4\t57165\n2021\t5\t41671\n2021\t6\t35337\n2021\t7\t28859\n2021\t8\t15475\n2021\t9\t9227\n2021\t10\t8024\n2021\t11\t9788\n2021\t12\t23113\n2022\t1\t170363\n2022\t2\t69992\n2022\t3\t19955\n2022\t4\t395\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1753024182319_1991892770",
+      "id": "paragraph_1753024182319_1991892770",
+      "dateCreated": "2025-07-20T10:09:42-0500",
+      "dateStarted": "2025-07-25T11:01:27-0500",
+      "dateFinished": "2025-07-25T11:01:31-0500",
+      "status": "FINISHED",
+      "$$hashKey": "object:15297"
+    },
+    {
+      "text": "%md\n# CONSULTA 5",
+      "user": "anonymous",
+      "dateUpdated": "2025-07-25T11:01:31-0500",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h1>CONSULTA 5</h1>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1753024901750_385561669",
+      "id": "paragraph_1753024901750_385561669",
+      "dateCreated": "2025-07-20T10:21:41-0500",
+      "dateStarted": "2025-07-25T11:01:31-0500",
+      "dateFinished": "2025-07-25T11:01:31-0500",
+      "status": "FINISHED",
+      "$$hashKey": "object:15298"
+    },
+    {
+      "text": "%md\n## Gráfica de Pie acerca de la cantidad de casos confirmados por provincia",
+      "user": "anonymous",
+      "dateUpdated": "2025-07-25T11:15:40-0500",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1753460123479_1531528364",
+      "id": "paragraph_1753460123479_1531528364",
+      "dateCreated": "2025-07-25T11:15:23-0500",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:32433",
+      "dateFinished": "2025-07-25T11:15:40-0500",
+      "dateStarted": "2025-07-25T11:15:40-0500",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>Gráfica de Pie acerca de la cantidad de casos confirmados por provincia</h2>\n\n</div>"
+          }
+        ]
+      }
+    },
+    {
+      "text": "%mysql\nSELECT \n  provincia,\n  COUNT(*) AS total_confirmados\nFROM m_covid\nWHERE clasificacion_final = 'CONFIRMADO'\nGROUP BY provincia\nORDER BY total_confirmados DESC;",
+      "user": "anonymous",
+      "dateUpdated": "2025-07-25T11:01:31-0500",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "pieChart",
+              "height": 889.733,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "clasificacion_final": "string",
+                      "total": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-90"
+                  },
+                  "xLabelStatus": "rotate",
+                  "stacked": false
+                },
+                "stackedAreaChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "lineChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "provincia",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "total_confirmados",
+                  "index": 1,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "provincia\ttotal_confirmados\nPICHINCHA\t323953\nGUAYAS\t130472\nMANABI\t53881\nEL ORO\t50937\nAZUAY\t42763\nLOJA\t33379\nIMBABURA\t29829\nTUNGURAHUA\t26184\nSANTO DOMINGO DE LOS TSACHILAS\t17459\nLOS RIOS\t17298\nCOTOPAXI\t17268\nCHIMBORAZO\t15128\nCA�AR\t14507\nESMERALDAS\t13512\nCARCHI\t12318\nBOLIVAR\t11471\nMORONA SANTIAGO\t10783\nSUCUMBIOS\t8689\nSANTA ELENA\t6906\nNAPO\t6884\nORELLANA\t5911\nPASTAZA\t5393\nZAMORA CHINCHIPE\t5052\nGALAPAGOS\t3254\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1753024919843_176660146",
+      "id": "paragraph_1753024919843_176660146",
+      "dateCreated": "2025-07-20T10:21:59-0500",
+      "dateStarted": "2025-07-25T11:01:31-0500",
+      "dateFinished": "2025-07-25T11:01:35-0500",
+      "status": "FINISHED",
+      "$$hashKey": "object:15299"
+    },
+    {
+      "user": "anonymous",
+      "dateUpdated": "2025-07-25T11:01:52-0500",
+      "progress": 0,
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1752761612063_507904831",
+      "id": "paragraph_1752761612063_507904831",
+      "dateCreated": "2025-07-17T09:13:32-0500",
+      "status": "FINISHED",
+      "$$hashKey": "object:15304"
+    }
+  ],
+  "name": "ZeppelinProyecto",
+  "id": "2M1SD8EFD",
+  "defaultInterpreterGroup": "spark",
+  "version": "0.10.1",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": {},
+  "path": "/ProyectoFinal/ZeppelinProyecto"
+}
